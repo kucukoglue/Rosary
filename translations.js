@@ -191,6 +191,7 @@ const translations = {
 function setLanguage(lang) {
   localStorage.setItem('rosary-lang', lang);
   document.documentElement.lang = lang;
+  document.querySelector('meta[property="og:locale"]')?.setAttribute('content', lang === 'tr' ? 'tr_TR' : 'en_US');
 
   // Update all translatable elements
   document.querySelectorAll('[data-i18n]').forEach(el => {
