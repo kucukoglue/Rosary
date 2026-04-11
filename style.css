@@ -12,6 +12,8 @@
   --color-cream: #F2E3D1;
   --color-cream-light: #FAF5EE;
   --color-cream-dark: #E8D5BF;
+  --color-pink: rgb(239, 208, 211);
+  --color-pink-dark: rgb(135, 0, 47);
   --color-gold: #C4A84D;
   --color-gold-light: #D4BE76;
   --color-lavender: #B8A9C9;
@@ -156,7 +158,7 @@ header.scrolled .nav-links a {
   left: 0;
   width: 0;
   height: 1px;
-  background: rgb(239, 208, 211);
+  background: var(--color-pink);
   transition: width var(--transition);
 }
 
@@ -166,7 +168,7 @@ header.scrolled .nav-links a {
 }
 
 header.scrolled .nav-links a::after {
-  background: rgb(135, 0, 47);
+  background: var(--color-pink-dark);
 }
 
 /* Language Switcher */
@@ -360,9 +362,9 @@ header.scrolled .menu-toggle span {
 }
 
 .hero-cta:hover {
-  background: rgb(239, 208, 211);
+  background: var(--color-pink);
   color: var(--color-charcoal);
-  border-color: rgb(239, 208, 211);
+  border-color: var(--color-pink);
 }
 
 /* --- Section Shared --- */
@@ -395,7 +397,7 @@ section {
 .section-divider {
   width: 50px;
   height: 1px;
-  background: var(--color-gold);
+  background: var(--color-pink);
   margin: 1.5rem auto;
 }
 
@@ -434,13 +436,13 @@ section {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--color-sage);
-  border-bottom: 1px solid var(--color-gold);
+  border-bottom: 1px solid var(--color-pink);
   padding-bottom: 3px;
   transition: color var(--transition);
 }
 
 .text-link:hover {
-  color: var(--color-sage-dark);
+  color: var(--color-pink-dark);
 }
 
 /* --- Featured Products (Home) --- */
@@ -611,7 +613,7 @@ section {
 }
 
 .product-detail-info .inquire-btn:hover {
-  background: var(--color-sage-dark);
+  background: var(--color-pink-dark);
 }
 
 /* --- Story Page --- */
@@ -664,7 +666,7 @@ section {
   font-style: italic;
   font-size: 1.4rem;
   color: var(--color-sage);
-  border-left: 2px solid var(--color-gold);
+  border-left: 2px solid var(--color-pink);
   padding-left: 1.5rem;
   margin: 2rem 0;
   line-height: 1.6;
@@ -743,7 +745,7 @@ section {
   font-weight: 300;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-sage);
+  color: var(--color-pink-dark);
   margin-bottom: 0.6rem;
 }
 
@@ -843,7 +845,7 @@ section {
 .blog-divider {
   width: 80px;
   height: 1px;
-  background: var(--color-gold);
+  background: var(--color-pink);
   margin: 3rem auto;
 }
 
@@ -858,6 +860,81 @@ section {
 
   .blog-image {
     height: 250px;
+  }
+}
+
+/* --- Cookie / KVKK Banner --- */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: var(--color-charcoal);
+  color: var(--color-cream-dark);
+  padding: 0.6rem 2rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-family: var(--font-body);
+  line-height: 1.4;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cookie-banner.visible {
+  display: flex;
+}
+
+.cookie-banner p {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--color-cream-dark);
+}
+
+.cookie-banner a {
+  color: var(--color-pink);
+  text-decoration: underline;
+}
+
+.cookie-banner a:hover {
+  color: var(--color-cream);
+}
+
+.cookie-btn {
+  flex-shrink: 0;
+  padding: 4px 14px;
+  background: var(--color-pink);
+  color: var(--color-charcoal);
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--transition);
+  white-space: nowrap;
+}
+
+.cookie-btn:hover {
+  background: var(--color-pink-dark);
+  color: var(--color-cream);
+}
+
+@media (max-width: 600px) {
+  .cookie-banner {
+    padding: 0.5rem 1rem;
+    gap: 0.6rem;
+  }
+
+  .cookie-banner p {
+    font-size: 0.68rem;
+    line-height: 1.3;
+  }
+
+  .cookie-btn {
+    padding: 3px 10px;
+    font-size: 0.65rem;
   }
 }
 
@@ -910,7 +987,7 @@ footer {
 }
 
 .footer-links a:hover {
-  color: var(--color-gold);
+  color: var(--color-pink);
 }
 
 .footer-bottom {

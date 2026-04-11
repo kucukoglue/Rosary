@@ -246,6 +246,15 @@
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
 
+  <!-- Cookie / KVKK Banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <p>Bu web sitesi, deneyiminizi iyileştirmek için çerezler kullanmaktadır. Siteyi kullanmaya devam ederek <a href="kvkk.html">KVKK ve Çerez Politikamızı</a> kabul etmiş sayılırsınız.</p>
+    <button class="cookie-btn" onclick="acceptCookies()">Kabul Et</button>
+  </div>
+  <script>
+    if (!localStorage.getItem('rosary-cookies')) document.getElementById('cookieBanner').classList.add('visible');
+    function acceptCookies() { localStorage.setItem('rosary-cookies', 'accepted'); document.getElementById('cookieBanner').classList.remove('visible'); }
+  </script>
   <script defer src="/_vercel/insights/script.js"></script>
   <script defer src="/_vercel/speed-insights/script.js"></script>
 </body>
