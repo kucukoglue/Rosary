@@ -207,7 +207,7 @@ function setLanguage(lang) {
 }
 
 function initLanguage() {
-  const saved = localStorage.getItem('rosary-lang') || 'en';
+  const saved = localStorage.getItem('rosary-lang') || 'tr';
   setLanguage(saved);
 }
 
