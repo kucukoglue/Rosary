@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROSARY — Fine Jewellery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="header">
+    <nav>
+      <a href="index.html" class="nav-logo">ROSARY</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li>
+        <li><a href="products.html" data-i18n="nav.collection">Collection</a></li>
+        <li><a href="story.html" data-i18n="nav.story">Our Story</a></li>
+        <li class="lang-switch">
+          <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-btn" data-lang="tr" onclick="setLanguage('tr')">TR</button>
+        </li>
+      </ul>
+      <div class="nav-right-mobile">
+        <div class="lang-switch-mobile">
+          <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-btn" data-lang="tr" onclick="setLanguage('tr')">TR</button>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <img src="hero.jpg" alt="Rosary Fine Jewellery collection" class="hero-image">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="subtitle" data-i18n="hero.subtitle">Fine Jewellery</p>
+      <h1>ROSARY</h1>
+      <a href="products.html" class="hero-cta" data-i18n="hero.cta">Discover the Collection</a>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="intro">
+    <div class="section-centered intro-grid fade-in">
+      <img src="Product 3/il_1588xN.7501862898_bp0j.jpg" alt="Rosary jewellery craftsmanship" class="intro-image">
+      <div class="intro-text">
+        <p class="subtitle" data-i18n="intro.subtitle">Handcrafted in Istanbul</p>
+        <h2 data-i18n="intro.title">Where Tradition Meets Timeless Elegance</h2>
+        <div class="section-divider" style="margin: 1.5rem 0;"></div>
+        <p data-i18n="intro.p1">
+          Born in the heart of the Grand Bazaar, each Rosary piece is meticulously handcrafted
+          by master artisans carrying centuries of tradition. Our fine gold jewellery marries
+          Ottoman-inspired artistry with contemporary sensibility.
+        </p>
+        <p data-i18n="intro.p2">
+          Every piece tells a story of heritage, patience, and the quiet beauty
+          of things made by hand.
+        </p>
+        <a href="story.html" class="text-link" data-i18n="intro.link">Read Our Story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="featured">
+    <div class="section-centered">
+      <div class="section-header fade-in">
+        <p class="subtitle" data-i18n="featured.subtitle">The Collection</p>
+        <h2 data-i18n="featured.title">Selected Pieces</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="featured-grid">
+        <a href="products.html" class="product-card fade-in">
+          <div style="overflow:hidden;">
+            <img src="Product 1/IMG_5474.jpg" alt="Flora Necklace" class="product-card-image">
+          </div>
+          <div class="product-card-info">
+            <h3 data-i18n="product1.name">Flora Necklace</h3>
+            <p class="product-type" data-i18n="product1.type">Necklace</p>
+          </div>
+        </a>
+        <a href="products.html" class="product-card fade-in">
+          <div style="overflow:hidden;">
+            <img src="Product 2/il_1588xN.7553022700_26xc.jpg" alt="Aura Ring" class="product-card-image">
+          </div>
+          <div class="product-card-info">
+            <h3 data-i18n="product2.name">Aura Ring</h3>
+            <p class="product-type" data-i18n="product2.type">Ring</p>
+          </div>
+        </a>
+        <a href="products.html" class="product-card fade-in">
+          <div style="overflow:hidden;">
+            <img src="Product 5/il_1588xN.7451219392_d8ra.jpg" alt="Cercle Pendant" class="product-card-image">
+          </div>
+          <div class="product-card-info">
+            <h3 data-i18n="product5.name">Cercle Pendant</h3>
+            <p class="product-type" data-i18n="product5.type">Necklace</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="values">
+    <div class="values-grid fade-in">
+      <div class="value-item">
+        <h3 data-i18n="value1.title">Handcrafted</h3>
+        <p data-i18n="value1.text">Each piece shaped by master artisans in our Grand Bazaar atelier</p>
+      </div>
+      <div class="value-item">
+        <h3 data-i18n="value2.title">Heritage</h3>
+        <p data-i18n="value2.text">Rooted in centuries of Ottoman jewellery-making tradition</p>
+      </div>
+      <div class="value-item">
+        <h3 data-i18n="value3.title">Timeless</h3>
+        <p data-i18n="value3.text">Designs that transcend seasons, made to be treasured for generations</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>ROSARY</h3>
+        <p data-i18n="footer.desc">Fine jewellery handcrafted in the heart of Istanbul's Grand Bazaar. Each piece carries the spirit of centuries-old artistry, reimagined for the modern world.</p>
+      </div>
+      <div class="footer-links">
+        <h4 data-i18n="footer.explore">Explore</h4>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="products.html" data-i18n="nav.collection">Collection</a>
+        <a href="story.html" data-i18n="nav.story">Our Story</a>
+      </div>
+      <div class="footer-links">
+        <h4 data-i18n="footer.contact">Contact</h4>
+        <a href="#" data-i18n="footer.location">Istanbul, Turkey</a>
+        <a href="#">info@rosaryjewellery.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom" data-i18n="footer.copy">
+      &copy; 2026 Rosary Fine Jewellery. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
