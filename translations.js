@@ -19,6 +19,7 @@ const translations = {
     // Home - Featured
     "featured.subtitle": "The Collection",
     "featured.title": "Selected Pieces",
+    "featured.cta": "See All Collection",
     "product1.name": "Flora Necklace",
     "product1.type": "Necklace",
     "product2.name": "Aura Ring",
@@ -189,6 +190,7 @@ const translations = {
     // Home - Featured
     "featured.subtitle": "Koleksiyon",
     "featured.title": "Se\u00e7kin Par\u00e7alar",
+    "featured.cta": "T\u00fcm Koleksiyonu G\u00f6r",
     "product1.name": "Flora Kolye",
     "product1.type": "Kolye",
     "product2.name": "Aura Y\u00fcz\u00fck",

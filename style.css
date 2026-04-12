@@ -500,6 +500,29 @@ section {
   font-weight: 300;
 }
 
+.featured-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.see-more-btn {
+  display: inline-block;
+  padding: 14px 40px;
+  border: 1px solid var(--color-sage-dark);
+  color: var(--color-sage-dark);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: all var(--transition);
+}
+
+.see-more-btn:hover {
+  background: var(--color-pink);
+  color: var(--color-charcoal);
+  border-color: var(--color-pink);
+}
+
 /* --- Products Page --- */
 .page-hero {
   height: 45vh;
