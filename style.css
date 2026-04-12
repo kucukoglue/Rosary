@@ -500,6 +500,56 @@ section {
   font-weight: 300;
 }
 
+.product-specs {
+  margin-top: 2rem;
+  border-top: 1px solid var(--color-pink);
+  padding-top: 1.5rem;
+}
+
+.product-specs h4 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-sage-dark);
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.product-specs table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-specs td {
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.product-specs td:first-child {
+  color: var(--color-warm-gray);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  width: 45%;
+}
+
+.product-specs td:last-child {
+  color: var(--color-charcoal);
+}
+
+.back-to-collection {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  color: var(--color-warm-gray);
+  transition: color var(--transition);
+}
+
+.back-to-collection:hover {
+  color: var(--color-pink-dark);
+}
+
 .featured-cta {
   text-align: center;
   margin-top: 3rem;
