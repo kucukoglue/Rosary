@@ -690,6 +690,14 @@
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+    // Sort newest on page load
+    (function() {
+      const grid = document.querySelector('.products-grid');
+      const items = Array.from(grid.children).filter(el => el.classList.contains('product-detail'));
+      items.sort((a, b) => parseInt(b.id.replace('product-', '')) - parseInt(a.id.replace('product-', '')));
+      items.forEach(item => grid.appendChild(item));
+    })();
+
     // Grid switching
     function setGrid(cols) {
       const grid = document.querySelector('.products-grid');
