@@ -11,14 +11,14 @@ const translations = {
 
     // Home - Intro
     "intro.subtitle": "Handcrafted in Istanbul",
-    "intro.title": "Where Tradition Meets Timeless Elegance",
-    "intro.p1": "Born in the heart of the Grand Bazaar, each Rosary piece is meticulously handcrafted by master artisans carrying centuries of tradition. Our fine gold jewellery marries Ottoman-inspired artistry with contemporary sensibility.",
-    "intro.p2": "Every piece tells a story of heritage, patience, and the quiet beauty of things made by hand.",
+    "intro.title": "Where Craft Meets Contemporary Elegance",
+    "intro.p1": "Rosary pieces are carefully handcrafted in the Grand Bazaar, where generations of jewellery-making tradition live on. We work with fine gold and natural stones to create pieces that feel both timeless and personal.",
+    "intro.p2": "Every piece tells a story — of intention, of care, and the quiet beauty of handcraft.",
     "intro.link": "Read Our Story",
 
     // Home - Featured
     "featured.subtitle": "The Collection",
-    "featured.title": "Selected Pieces",
+    "featured.title": "Highlights",
     "featured.cta": "See All Collection",
     "product1.name": "Flora Necklace",
     "product1.type": "Necklace",
@@ -98,6 +98,10 @@ const translations = {
     "product13.desc": "A diamond-encrusted bow in rose gold suspends a vivid ruby drop, creating a piece that balances femininity with brilliance. The bow motif — a symbol of connection and celebration — is rendered with the precision of Grand Bazaar master setters.",
     "product14.fulltype": "Gold Necklace with Tourmaline",
     "product14.desc": "Three watermelon tourmaline drops are cradled in hand-formed gold bezels, clustered together like precious petals on a twisted gold chain. The tourmaline's natural gradient — from blush pink to deep green — makes each stone a unique work of nature, set by artisan hands.",
+    "product15.name": "Dragonfly Bracelet",
+    "product15.type": "Bracelet",
+    "product15.fulltype": "Gold Bracelet with Dragonfly",
+    "product15.desc": "A delicate gold bracelet featuring a hand-crafted dragonfly motif, symbolising transformation and lightness. Each detail is carefully shaped to capture the grace of this timeless natural form.",
     "inquire": "Inquire",
 
     // Story page
@@ -183,13 +187,13 @@ const translations = {
     // Home - Intro
     "intro.subtitle": "\u0130stanbul'da El Yap\u0131m\u0131",
     "intro.title": "Gelene\u011fin Zamans\u0131z Zarafetle Bulu\u015fmas\u0131",
-    "intro.p1": "Kapal\u0131\u00e7ar\u015f\u0131'n\u0131n kalbinde do\u011fan her Rosary par\u00e7as\u0131, as\u0131rlard\u0131r s\u00fcregelen gelene\u011fi ta\u015f\u0131yan usta zanaatk\u00e2rlar taraf\u0131ndan titizlikle el yap\u0131m\u0131 olarak \u00fcretilmektedir. Alt\u0131n m\u00fccevherlerimiz, Osmanl\u0131'dan ilham alan sanatk\u00e2rl\u0131\u011f\u0131 \u00e7a\u011fda\u015f bir anlay\u0131\u015fla bulu\u015fturur.",
-    "intro.p2": "Her par\u00e7a; miras\u0131n, sabr\u0131n ve el eme\u011fiyle yarat\u0131lan \u015feylerin sessiz g\u00fczelli\u011finin hikayesini anlat\u0131r.",
+    "intro.p1": "Rosary par\u00e7alar\u0131, nesillerdir s\u00fcregelen kuyumculuk gelene\u011finin ya\u015fad\u0131\u011f\u0131 Kapal\u0131\u00e7ar\u015f\u0131'da \u00f6zenle el yap\u0131m\u0131 olarak \u00fcretilir. Has alt\u0131n ve do\u011fal ta\u015flarla, hem zamans\u0131z hem ki\u015fiye \u00f6zel hissettiren par\u00e7alar \u00fcretiyoruz.",
+    "intro.p2": "Her par\u00e7a bir hikaye anlat\u0131r \u2014 niyetin, \u00f6zenin ve el eme\u011finin sessiz g\u00fczelli\u011finin.",
     "intro.link": "Hikayemizi Okuyun",
 
     // Home - Featured
     "featured.subtitle": "Koleksiyon",
-    "featured.title": "Se\u00e7kin Par\u00e7alar",
+    "featured.title": "\u00d6ne \u00c7\u0131kanlar",
     "featured.cta": "T\u00fcm Koleksiyonu G\u00f6r",
     "product1.name": "Flora Kolye",
     "product1.type": "Kolye",
@@ -269,6 +273,10 @@ const translations = {
     "product13.desc": "Rose altından pırlanta işlemeli bir fiyonk, canlı bir yakut damlası taşır. Bağlantı ve kutlamanın simgesi olan fiyonk motifi, Kapalıçarşı usta kakma ustalarının hassasiyetiyle işlenmiştir.",
     "product14.fulltype": "Turmalinli Altın Kolye",
     "product14.desc": "Üç karpuz turmalini damlası, el yapımı altın çerçevelerde yuvalanarak bükülmüş altın bir zincir üzerinde değerli yapraklar gibi kümelenir. Turmalinin pembe tonlarından koyu yeşile uzanan doğal gradyanı, her taşı doğanın eşsiz bir eseri yapar.",
+    "product15.name": "Dragonfly Bilezik",
+    "product15.type": "Bilezik",
+    "product15.fulltype": "Yusufçuk Figürlü Altın Bilezik",
+    "product15.desc": "Yusufçuk motifiyle süslü, zarif bir altın bilezik. Dönüşümü ve hafifliği simgeleyen yusufçuk, her detayıyla özenle şekillendirilmiştir.",
     "inquire": "Bilgi Alın",
 
     // Story page
