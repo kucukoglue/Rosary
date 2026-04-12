@@ -674,19 +674,41 @@ section {
   display: inline-block;
   margin-top: 1.5rem;
   padding: 12px 32px;
+  background: transparent;
+  color: var(--color-sage);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1px solid var(--color-sage);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.product-detail-info .inquire-btn:hover {
+  background: var(--color-sage);
+  color: var(--color-cream-light);
+}
+
+.product-detail-info .view-details-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  margin-right: 0.8rem;
+  padding: 12px 32px;
   background: var(--color-sage);
   color: var(--color-cream-light);
   font-family: var(--font-body);
   font-size: 0.95rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  border: none;
+  border: 1px solid var(--color-sage);
   cursor: pointer;
-  transition: background var(--transition);
+  transition: all var(--transition);
 }
 
-.product-detail-info .inquire-btn:hover {
+.product-detail-info .view-details-btn:hover {
   background: var(--color-pink-dark);
+  border-color: var(--color-pink-dark);
 }
 
 /* --- Story Page --- */
