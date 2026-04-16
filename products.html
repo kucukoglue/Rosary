@@ -665,7 +665,24 @@
       const thumbs = thumb.parentElement.querySelectorAll('img');
       thumbs.forEach(t => t.classList.remove('active'));
       thumb.classList.add('active');
+      // Update hover overlay too
+      const gallery = mainImg.closest('.product-gallery');
+      if (gallery) {
+        const hoverImg = gallery.querySelector('.product-gallery-hover');
+        if (hoverImg) hoverImg.src = thumb.src;
+      }
     }
+
+    // Thumbnail hover changes main image
+    document.querySelectorAll('.product-thumbnails img').forEach(function(thumb) {
+      thumb.addEventListener('mouseenter', function() {
+        var mainId = this.getAttribute('onclick');
+        if (mainId) {
+          var match = mainId.match(/'(main-\d+)'/);
+          if (match) switchImage(match[1], this);
+        }
+      });
+    });
 
     // Fade-in on scroll
     const observer = new IntersectionObserver((entries) => {
