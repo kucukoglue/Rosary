@@ -569,6 +569,17 @@ section {
   }
 }
 
+.story-contact {
+  background: var(--color-sage);
+  padding: 5rem 3rem;
+}
+
+.story-contact .hero-cta:hover {
+  background: var(--color-cream-light);
+  color: var(--color-sage);
+  border-color: var(--color-cream-light);
+}
+
 .back-to-collection {
   display: inline-block;
   margin-top: 1.5rem;
