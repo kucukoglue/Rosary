@@ -17,6 +17,8 @@ const translations = {
     "intro.link": "Read Our Story",
 
     // Home - Featured
+    "newarrivals.subtitle": "New",
+    "newarrivals.title": "New Arrivals",
     "featured.subtitle": "The Collection",
     "featured.title": "Highlights",
     "featured.cta": "See All Collection",
@@ -58,7 +60,7 @@ const translations = {
     "value3.text": "Designs that transcend seasons, made to be treasured for generations",
 
     // Footer
-    "footer.desc": "Fine jewellery handcrafted in the heart of Istanbul's Grand Bazaar. Each piece carries the spirit of centuries-old artistry, reimagined for the modern world.",
+    "footer.desc": "Nature-inspired jewellery, designed in Istanbul and shaped in Grand Bazaar workshops. Where wax mould making, CAD design and traditional craft meet conscious production.",
     "footer.explore": "Explore",
     "footer.contact": "Contact",
     "footer.location": "Istanbul, Turkey",
@@ -337,6 +339,8 @@ const translations = {
     "intro.link": "Hikayemizi Okuyun",
 
     // Home - Featured
+    "newarrivals.subtitle": "Yeni",
+    "newarrivals.title": "Yeni Eklenenler",
     "featured.subtitle": "Koleksiyon",
     "featured.title": "\u00d6ne \u00c7\u0131kanlar",
     "featured.cta": "T\u00fcm Koleksiyonu G\u00f6r",
@@ -378,7 +382,7 @@ const translations = {
     "value3.text": "Mevsimleri a\u015fan, nesiller boyu saklanmak \u00fczere tasarlanan tasar\u0131mlar",
 
     // Footer
-    "footer.desc": "\u0130stanbul Kapal\u0131\u00e7ar\u015f\u0131'n\u0131n kalbinde el yap\u0131m\u0131 m\u00fccevherler. Her par\u00e7a, as\u0131rl\u0131k sanatk\u00e2rl\u0131\u011f\u0131n ruhunu modern d\u00fcnyaya ta\u015f\u0131r.",
+    "footer.desc": "Do\u011fadan ilham alan, \u0130stanbul\u2019da tasarlanan ve Kapal\u0131\u00e7ar\u015f\u0131 at\u00f6lyelerinde \u015fekillenen \u00f6zg\u00fcn m\u00fccevherler. Mum kal\u0131p i\u015fleme, CAD tasar\u0131m ve geleneksel zanaatin bulu\u015ftu\u011fu bilin\u00e7li \u00fcretim.",
     "footer.explore": "Ke\u015ffet",
     "footer.contact": "\u0130leti\u015fim",
     "footer.location": "\u0130stanbul, T\u00fcrkiye",

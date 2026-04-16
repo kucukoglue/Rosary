@@ -686,12 +686,25 @@
       items.forEach(item => grid.appendChild(item));
     })();
 
-    // Make gallery main images clickable to product page
-    var slugMap = {1:'flora-necklace',2:'aura-ring',3:'rosary-pendant',4:'bazaar-chain',5:'cercle-pendant',6:'emerald-bow-earrings',7:'eye-pendant',8:'kunye-bracelet',9:'le-reve-du-papillon',10:'mon-coeur',11:'perle-earrings',12:'roses-pendant',13:'ruby-bow-necklace',14:'tourmaline-necklace',15:'dragonfly-bracelet'};
-    document.querySelectorAll('.product-gallery-main').forEach(function(img) {
-      img.style.cursor = 'pointer';
-      img.addEventListener('click', function() {
-        var id = this.id.replace('main-', '');
+    // Make gallery images clickable to product page
+    var slugMap = {'1':'flora-necklace','2':'aura-ring','3':'rosary-pendant','4':'bazaar-chain','5':'cercle-pendant','6':'emerald-bow-earrings','7':'eye-pendant','8':'kunye-bracelet','9':'le-reve-du-papillon','10':'mon-coeur','11':'perle-earrings','12':'roses-pendant','13':'ruby-bow-necklace','14':'tourmaline-necklace','15':'dragonfly-bracelet'};
+
+    // Add hover image from second thumbnail (or same image if only one)
+    document.querySelectorAll('.product-gallery').forEach(function(gallery) {
+      var mainImg = gallery.querySelector('.product-gallery-main');
+      var thumbs = gallery.querySelectorAll('.product-thumbnails img');
+      var hoverImg = document.createElement('img');
+      hoverImg.src = (thumbs.length > 1) ? thumbs[1].src : mainImg.src;
+      hoverImg.alt = mainImg.alt;
+      hoverImg.className = 'product-gallery-hover';
+      hoverImg.loading = 'lazy';
+      gallery.appendChild(hoverImg);
+
+      // Make both images clickable
+      var id = mainImg.id.replace('main-', '');
+      gallery.style.cursor = 'pointer';
+      gallery.addEventListener('click', function(e) {
+        if (e.target.closest('.product-thumbnails')) return;
         if (slugMap[id]) window.location = slugMap[id] + '.html';
       });
     });
