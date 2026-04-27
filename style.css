@@ -1563,10 +1563,25 @@ footer {
   .products-grid.grid-3 .product-detail-info .view-details-btn,
   .products-grid.grid-4 .product-detail-info .inquire-btn,
   .products-grid.grid-4 .product-detail-info .view-details-btn {
-    padding: 6px 10px;
-    font-size: 0.7rem;
-    margin-top: 0.6rem;
-    margin-right: 0.3rem;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    font-size: 0.72rem;
+    line-height: 1.2;
+    margin: 0.5rem 0 0 0;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .products-grid.grid-3 .product-detail-info > p:not(.product-type),
+  .products-grid.grid-4 .product-detail-info > p:not(.product-type) {
+    display: none !important;
+  }
+
+  .products-grid.grid-3 .product-thumbnails,
+  .products-grid.grid-4 .product-thumbnails {
+    display: none !important;
   }
 
   .toolbar-grid {
