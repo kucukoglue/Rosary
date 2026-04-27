@@ -1014,6 +1014,7 @@ section {
   border: 1px solid var(--color-sage);
   cursor: pointer;
   transition: all var(--transition);
+  vertical-align: middle;
 }
 
 .product-detail-info .inquire-btn:hover {
@@ -1024,7 +1025,7 @@ section {
 .product-detail-info .view-details-btn {
   display: inline-block;
   margin-top: 1.5rem;
-  margin-right: 0.8rem;
+  margin-right: 0.5rem;
   padding: 12px 32px;
   background: var(--color-sage);
   color: var(--color-cream-light);
@@ -1036,6 +1037,7 @@ section {
   border: 1px solid var(--color-sage);
   cursor: pointer;
   transition: all var(--transition);
+  vertical-align: middle;
 }
 
 .product-detail-info .view-details-btn:hover {
@@ -1538,23 +1540,23 @@ footer {
 
   .products-grid.grid-3,
   .products-grid.grid-4 {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.6rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 
   .products-grid.grid-3 .product-detail-info,
   .products-grid.grid-4 .product-detail-info {
-    padding: 0.6rem 0.3rem;
+    padding: 0.8rem 0.4rem;
   }
 
   .products-grid.grid-3 .product-detail-info h3,
   .products-grid.grid-4 .product-detail-info h3 {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .products-grid.grid-3 .product-detail-info .product-type,
   .products-grid.grid-4 .product-detail-info .product-type {
-    font-size: 0.7rem;
+    font-size: 0.78rem;
   }
 
   .products-grid.grid-3 .product-detail-info .inquire-btn,
