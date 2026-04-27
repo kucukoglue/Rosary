@@ -910,6 +910,8 @@ section {
   border-radius: 1rem;
   overflow: hidden;
   transition: box-shadow var(--transition);
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 600px;
 }
 
 .product-detail:hover {
@@ -1529,21 +1531,40 @@ footer {
   }
 
   .products-grid,
-  .products-grid.grid-2,
-  .products-grid.grid-3,
-  .products-grid.grid-4 {
+  .products-grid.grid-2 {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
 
-  .products-grid.grid-3 .product-detail-info p:not(.product-type),
-  .products-grid.grid-4 .product-detail-info p:not(.product-type) {
-    display: block;
+  .products-grid.grid-3,
+  .products-grid.grid-4 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
   }
 
-  .products-grid.grid-3 .product-thumbnails,
-  .products-grid.grid-4 .product-thumbnails {
-    display: flex;
+  .products-grid.grid-3 .product-detail-info,
+  .products-grid.grid-4 .product-detail-info {
+    padding: 0.6rem 0.3rem;
+  }
+
+  .products-grid.grid-3 .product-detail-info h3,
+  .products-grid.grid-4 .product-detail-info h3 {
+    font-size: 0.8rem;
+  }
+
+  .products-grid.grid-3 .product-detail-info .product-type,
+  .products-grid.grid-4 .product-detail-info .product-type {
+    font-size: 0.7rem;
+  }
+
+  .products-grid.grid-3 .product-detail-info .inquire-btn,
+  .products-grid.grid-3 .product-detail-info .view-details-btn,
+  .products-grid.grid-4 .product-detail-info .inquire-btn,
+  .products-grid.grid-4 .product-detail-info .view-details-btn {
+    padding: 6px 10px;
+    font-size: 0.7rem;
+    margin-top: 0.6rem;
+    margin-right: 0.3rem;
   }
 
   .toolbar-grid {
