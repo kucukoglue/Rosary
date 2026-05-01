@@ -1177,10 +1177,10 @@ section {
 .blog-card-category {
   font-family: var(--font-body);
   font-size: 0.78rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-pink);
+  color: var(--color-pink-dark);
   margin-bottom: 0.5rem;
 }
 
