@@ -1,0 +1,19 @@
+{
+  "redirects": [
+    { "source": "/flora-necklace.html", "destination": "/floral-kolye.html", "permanent": true },
+    { "source": "/aura-ring.html", "destination": "/gypsy-muhur-yuzuk.html", "permanent": true },
+    { "source": "/rosary-pendant.html", "destination": "/rosary-imza-kolye.html", "permanent": true },
+    { "source": "/mon-coeur.html", "destination": "/mon-coeur-kolye.html", "permanent": true },
+    { "source": "/cercle-pendant.html", "destination": "/cercle-kolye-ucu.html", "permanent": true },
+    { "source": "/emerald-bow-earrings.html", "destination": "/zumrut-fiyonk-kupe.html", "permanent": true },
+    { "source": "/eye-pendant.html", "destination": "/nazar-kolye-ucu.html", "permanent": true },
+    { "source": "/perle-earrings.html", "destination": "/inci-kupe.html", "permanent": true },
+    { "source": "/le-reve-du-papillon.html", "destination": "/kelebek-kolye.html", "permanent": true },
+    { "source": "/bazaar-chain.html", "destination": "/carsi-zincir.html", "permanent": true },
+    { "source": "/kunye-bracelet.html", "destination": "/kunye-bileklik.html", "permanent": true },
+    { "source": "/roses-pendant.html", "destination": "/gul-kolye.html", "permanent": true },
+    { "source": "/ruby-bow-necklace.html", "destination": "/yakut-fiyonk-kolye.html", "permanent": true },
+    { "source": "/tourmaline-necklace.html", "destination": "/turmalin-kolye.html", "permanent": true },
+    { "source": "/dragonfly-bracelet.html", "destination": "/yusufcuk-bileklik.html", "permanent": true }
+  ]
+}
