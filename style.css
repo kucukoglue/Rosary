@@ -1422,7 +1422,7 @@ footer {
 .footer-brand p {
   font-size: 0.95rem;
   line-height: 1.8;
-  color: var(--color-warm-gray);
+  color: var(--color-cream-dark);
   max-width: 350px;
 }
 
@@ -1438,7 +1438,7 @@ footer {
 .footer-links a {
   display: block;
   font-size: 0.95rem;
-  color: var(--color-warm-gray);
+  color: var(--color-cream-dark);
   margin-bottom: 0.6rem;
   transition: color var(--transition);
 }
@@ -1454,7 +1454,7 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   text-align: center;
   font-size: 0.85rem;
-  color: var(--color-warm-gray);
+  color: var(--color-cream-dark);
   letter-spacing: 0.06em;
 }
 
