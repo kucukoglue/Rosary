@@ -1,19 +1,48 @@
 {
   "redirects": [
-    { "source": "/flora-necklace.html", "destination": "/floral-kolye.html", "permanent": true },
-    { "source": "/aura-ring.html", "destination": "/gypsy-muhur-yuzuk.html", "permanent": true },
-    { "source": "/rosary-pendant.html", "destination": "/rosary-imza-kolye.html", "permanent": true },
-    { "source": "/mon-coeur.html", "destination": "/mon-coeur-kolye.html", "permanent": true },
-    { "source": "/cercle-pendant.html", "destination": "/cercle-kolye-ucu.html", "permanent": true },
-    { "source": "/emerald-bow-earrings.html", "destination": "/zumrut-fiyonk-kupe.html", "permanent": true },
-    { "source": "/eye-pendant.html", "destination": "/nazar-kolye-ucu.html", "permanent": true },
-    { "source": "/perle-earrings.html", "destination": "/inci-kupe.html", "permanent": true },
-    { "source": "/le-reve-du-papillon.html", "destination": "/kelebek-kolye.html", "permanent": true },
-    { "source": "/bazaar-chain.html", "destination": "/carsi-zincir.html", "permanent": true },
-    { "source": "/kunye-bracelet.html", "destination": "/kunye-bileklik.html", "permanent": true },
-    { "source": "/roses-pendant.html", "destination": "/gul-kolye.html", "permanent": true },
-    { "source": "/ruby-bow-necklace.html", "destination": "/yakut-fiyonk-kolye.html", "permanent": true },
-    { "source": "/tourmaline-necklace.html", "destination": "/turmalin-kolye.html", "permanent": true },
-    { "source": "/dragonfly-bracelet.html", "destination": "/yusufcuk-bileklik.html", "permanent": true }
+    { "source": "/flora-necklace.html", "destination": "/cicek-motifli-altin-kolye.html", "permanent": true },
+    { "source": "/floral-kolye.html", "destination": "/cicek-motifli-altin-kolye.html", "permanent": true },
+
+    { "source": "/aura-ring.html", "destination": "/gypsy-tasli-altin-muhur-yuzuk.html", "permanent": true },
+    { "source": "/gypsy-muhur-yuzuk.html", "destination": "/gypsy-tasli-altin-muhur-yuzuk.html", "permanent": true },
+
+    { "source": "/rosary-pendant.html", "destination": "/rosary-altin-hac-kolye.html", "permanent": true },
+    { "source": "/rosary-imza-kolye.html", "destination": "/rosary-altin-hac-kolye.html", "permanent": true },
+
+    { "source": "/mon-coeur.html", "destination": "/kalp-motifli-altin-kolye.html", "permanent": true },
+    { "source": "/mon-coeur-kolye.html", "destination": "/kalp-motifli-altin-kolye.html", "permanent": true },
+
+    { "source": "/cercle-pendant.html", "destination": "/cicek-buketi-rose-altin-kolye-ucu.html", "permanent": true },
+    { "source": "/cercle-kolye-ucu.html", "destination": "/cicek-buketi-rose-altin-kolye-ucu.html", "permanent": true },
+
+    { "source": "/emerald-bow-earrings.html", "destination": "/zumrut-tasli-altin-fiyonk-kupe.html", "permanent": true },
+    { "source": "/zumrut-fiyonk-kupe.html", "destination": "/zumrut-tasli-altin-fiyonk-kupe.html", "permanent": true },
+
+    { "source": "/eye-pendant.html", "destination": "/nazar-rose-altin-kolye-ucu.html", "permanent": true },
+    { "source": "/nazar-kolye-ucu.html", "destination": "/nazar-rose-altin-kolye-ucu.html", "permanent": true },
+
+    { "source": "/perle-earrings.html", "destination": "/barok-inci-altin-kupe.html", "permanent": true },
+    { "source": "/inci-kupe.html", "destination": "/barok-inci-altin-kupe.html", "permanent": true },
+
+    { "source": "/le-reve-du-papillon.html", "destination": "/kelebek-inci-altin-kolye.html", "permanent": true },
+    { "source": "/kelebek-kolye.html", "destination": "/kelebek-inci-altin-kolye.html", "permanent": true },
+
+    { "source": "/bazaar-chain.html", "destination": "/altin-carsi-zincir-kolye.html", "permanent": true },
+    { "source": "/carsi-zincir.html", "destination": "/altin-carsi-zincir-kolye.html", "permanent": true },
+
+    { "source": "/kunye-bracelet.html", "destination": "/altin-kunye-bileklik.html", "permanent": true },
+    { "source": "/kunye-bileklik.html", "destination": "/altin-kunye-bileklik.html", "permanent": true },
+
+    { "source": "/roses-pendant.html", "destination": "/gul-motifli-altin-kolye.html", "permanent": true },
+    { "source": "/gul-kolye.html", "destination": "/gul-motifli-altin-kolye.html", "permanent": true },
+
+    { "source": "/ruby-bow-necklace.html", "destination": "/yakut-tasli-altin-fiyonk-kolye.html", "permanent": true },
+    { "source": "/yakut-fiyonk-kolye.html", "destination": "/yakut-tasli-altin-fiyonk-kolye.html", "permanent": true },
+
+    { "source": "/tourmaline-necklace.html", "destination": "/turmalin-tasli-altin-kolye.html", "permanent": true },
+    { "source": "/turmalin-kolye.html", "destination": "/turmalin-tasli-altin-kolye.html", "permanent": true },
+
+    { "source": "/dragonfly-bracelet.html", "destination": "/tasli-altin-yusufcuk-bileklik.html", "permanent": true },
+    { "source": "/yusufcuk-bileklik.html", "destination": "/tasli-altin-yusufcuk-bileklik.html", "permanent": true }
   ]
 }
