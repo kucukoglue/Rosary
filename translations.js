@@ -104,6 +104,10 @@ const translations = {
     "product15.type": "Bracelet",
     "product15.fulltype": "Rose Gold Bracelet with Dragonfly",
     "product15.desc": "A delicate rose gold bracelet featuring a dragonfly motif \u2014 a symbol of transformation and renewal.",
+    "product16.name": "Viking Hair Cuff",
+    "product16.type": "Hair Accessory",
+    "product16.fulltype": "Gold Plated Hair Cuff with Zircon",
+    "product16.desc": "A clean-lined hair cuff designed for everyday wear. Zircon accents catch the light with a subtle shimmer \u2014 simple enough to slip on with anything, refined enough to feel like a small daily ritual.",
     "inquire": "Contact Us",
     "product.back": "\u2190 Back to Collection",
     "product.viewDetails": "View Details",
@@ -217,6 +221,8 @@ const translations = {
     "product15.spec.chainLength": "17.5 cm",
     "product15.spec.dimensions": "Dragonfly: ~1 cm",
     "product15.spec.clasp": "Lobster",
+    "product16.spec.material": "14K Gold Plated 925 Sterling Silver",
+    "product16.spec.stone": "Zircon",
 
     // Story page
     "story.hero.subtitle": "Rosary",
@@ -394,6 +400,10 @@ const translations = {
     "product15.type": "Bilezik",
     "product15.fulltype": "Yusufçuk Figürlü Rose Gold Bilezik",
     "product15.desc": "Yusufçuk motifli zarif bir rose gold bilezik \u2014 dönüşümü ve yenilenmeyi simgeler.",
+    "product16.name": "Viking Saç Tokası",
+    "product16.type": "Saç Aksesuarı",
+    "product16.fulltype": "Zirkon Taşlı Altın Kaplama Saç Tokası",
+    "product16.desc": "Sade çizgileriyle her gün taşınmak için tasarlanmış bir saç aksesuarı. Zirkon detaylar ışıkla buluşunca ince bir parıltı katar — ne giysek üstüne yakışacak kadar yalın, küçük bir günlük ritüel hissi verecek kadar zarif.",
     "inquire": "İletişime Geçin",
     "product.back": "\u2190 Koleksiyona D\u00f6n",
     "product.viewDetails": "Detaylar\u0131 G\u00f6r",
@@ -508,6 +518,8 @@ const translations = {
     "product15.spec.chainLength": "17.5 cm",
     "product15.spec.dimensions": "Yusuf\u00e7uk: ~1 cm",
     "product15.spec.clasp": "Lobster",
+    "product16.spec.material": "925 G\u00fcm\u00fc\u015f \u00dczeri 14K Alt\u0131n Kaplama",
+    "product16.spec.stone": "Zirkon",
 
     // Story page
     "story.hero.subtitle": "Rosary",
