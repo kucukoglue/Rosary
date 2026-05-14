@@ -1143,6 +1143,9 @@ section {
   transition: opacity var(--transition);
   cursor: pointer;
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .blog-card:hover {
@@ -1171,6 +1174,9 @@ section {
 .blog-card-info {
   padding: 1rem 0.2rem 0;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .blog-card-category {
@@ -1190,6 +1196,11 @@ section {
   line-height: 1.4;
   margin-bottom: 0.6rem;
   font-weight: 400;
+  min-height: 2.8em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .blog-card-excerpt {
@@ -1205,6 +1216,7 @@ section {
   color: var(--color-warm-gray);
   letter-spacing: 0.05em;
   font-weight: 300;
+  margin-top: auto;
 }
 
 .blog-back {
