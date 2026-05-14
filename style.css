@@ -912,8 +912,17 @@ section {
   flex: 1;
 }
 
-.product-detail-info .view-details-btn {
+.product-actions {
   margin-top: auto;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.product-actions .view-details-btn,
+.product-actions .inquire-btn {
+  margin-top: 1.5rem;
+  margin-right: 0;
 }
 
 .product-detail:hover {
