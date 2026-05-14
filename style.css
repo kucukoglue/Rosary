@@ -901,6 +901,19 @@ section {
   transition: box-shadow var(--transition);
   content-visibility: auto;
   contain-intrinsic-size: 1px 600px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-detail-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-detail-info .view-details-btn {
+  margin-top: auto;
 }
 
 .product-detail:hover {
