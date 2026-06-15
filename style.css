@@ -919,6 +919,35 @@ section {
   flex-wrap: wrap;
 }
 
+.product-pricing {
+  margin-top: 1rem;
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--color-cream-dark);
+  border-bottom: 1px solid var(--color-cream-dark);
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: var(--color-warm-gray);
+}
+
+.price-label {
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.price-value {
+  color: var(--color-sage-dark);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
 .product-actions .view-details-btn,
 .product-actions .inquire-btn {
   margin-top: 1.5rem;
