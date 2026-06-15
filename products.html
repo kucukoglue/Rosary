@@ -247,6 +247,19 @@
             "material": "925 Gümüş üzeri 14K Altın Kaplama",
             "category": "Saç Aksesuarı"
           }
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "item": {
+            "@type": "Product",
+            "name": "Yıldız Kolye Ucu",
+            "description": "Lazer işlemeli yüzeyinde lab-grown pırlanta yıldız formunda oturtulmuş altın kolye ucu.",
+            "image": "https://www.rosarygold.com.tr/Product%2017/laser%20engrave%20pendant%20with%20lab%20grown%20star%20setting.jpeg",
+            "brand": { "@type": "Brand", "name": "Rosary" },
+            "material": "14K Altın / 925 Gümüş Üzeri 14K Altın Kaplama",
+            "category": "Kolye Ucu"
+          }
         }
       ]
     }
@@ -780,6 +793,30 @@
           </div>
         </div>
 
+        <!-- Product 17: Star Pendant -->
+        <div class="product-detail fade-in" id="product-17" data-type="necklace" data-material="14k 14k-plated">
+          <div class="product-gallery">
+            <img src="Product 17/laser engrave pendant with lab grown star setting.jpeg" alt="Star Pendant" class="product-gallery-main" loading="lazy" id="main-17">
+            <div class="product-thumbnails">
+              <img src="Product 17/laser engrave pendant with lab grown star setting.jpeg" alt="Star Pendant view 1" class="active" onclick="switchImage('main-17', this)">
+            </div>
+          </div>
+          <div class="product-detail-info">
+            <h3 data-i18n="product17.name">Star Pendant</h3>
+            <p class="product-type" data-i18n="product17.fulltype">Gold Pendant with Lab-Grown Diamond Star Setting</p>
+            <p data-i18n="product17.desc">A pendant whose laser-engraved surface holds a lab-grown diamond in a star setting.</p>
+            <div class="product-pricing">
+              <div class="price-row"><span class="price-label" data-i18n="price.14k">14K Altın</span><span class="price-value">—</span></div>
+              <div class="price-row"><span class="price-label" data-i18n="price.plated">Altın Kaplama</span><span class="price-value">—</span></div>
+              <div class="price-row"><span class="price-label" data-i18n="price.silver">925 Gümüş</span><span class="price-value">—</span></div>
+            </div>
+            <div class="product-actions">
+              <a href="yildiz-pirlanta-altin-kolye-ucu.html" class="view-details-btn" data-i18n="product.viewDetails">View Details</a>
+              <a href="#" onclick="inquireWhatsApp('Star Pendant'); return false;" class="inquire-btn" data-i18n="inquire">Inquire</a>
+            </div>
+          </div>
+        </div>
+
         <!-- Product 16: Viking Hair Cuff -->
         <div class="product-detail fade-in" id="product-16" data-type="accessory" data-material="14k-plated">
           <div class="product-gallery">
@@ -905,7 +942,7 @@
     })();
 
     // Make gallery images clickable to product page
-    var slugMap = {'1':'cicek-motifli-altin-kolye','2':'gypsy-tasli-altin-muhur-yuzuk','3':'rosary-altin-hac-kolye','4':'altin-carsi-zincir-kolye','5':'cicek-buketi-rose-altin-kolye-ucu','6':'zumrut-tasli-altin-fiyonk-kupe','7':'nazar-rose-altin-kolye-ucu','8':'altin-kunye-bileklik','9':'kelebek-inci-altin-kolye','10':'kalp-motifli-altin-kolye','11':'barok-inci-altin-kupe','12':'gul-motifli-altin-kolye','13':'yakut-tasli-altin-fiyonk-kolye','14':'turmalin-tasli-altin-kolye','15':'tasli-altin-yusufcuk-bileklik','16':'viking-altin-sac-tokasi'};
+    var slugMap = {'1':'cicek-motifli-altin-kolye','2':'gypsy-tasli-altin-muhur-yuzuk','3':'rosary-altin-hac-kolye','4':'altin-carsi-zincir-kolye','5':'cicek-buketi-rose-altin-kolye-ucu','6':'zumrut-tasli-altin-fiyonk-kupe','7':'nazar-rose-altin-kolye-ucu','8':'altin-kunye-bileklik','9':'kelebek-inci-altin-kolye','10':'kalp-motifli-altin-kolye','11':'barok-inci-altin-kupe','12':'gul-motifli-altin-kolye','13':'yakut-tasli-altin-fiyonk-kolye','14':'turmalin-tasli-altin-kolye','15':'tasli-altin-yusufcuk-bileklik','16':'viking-altin-sac-tokasi','17':'yildiz-pirlanta-altin-kolye-ucu'};
 
     // Add hover image from second thumbnail (or same image if only one)
     document.querySelectorAll('.product-gallery').forEach(function(gallery) {

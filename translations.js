@@ -108,6 +108,10 @@ const translations = {
     "product16.type": "Hair Accessory",
     "product16.fulltype": "Gold Plated Hair Cuff with Zircon",
     "product16.desc": "A hair cuff crafted in 925 sterling silver, the surface worked with geometric motifs from the Viking period and set with zircon stones.",
+    "product17.name": "Star Pendant",
+    "product17.type": "Pendant",
+    "product17.fulltype": "Gold Pendant with Lab-Grown Diamond Star Setting",
+    "product17.desc": "A pendant whose laser-engraved surface holds a lab-grown diamond in a star setting. The fine engraving and the stone's light meet across the form.",
     "inquire": "Contact Us",
     "product.back": "\u2190 Back to Collection",
     "product.viewDetails": "View Details",
@@ -227,6 +231,8 @@ const translations = {
     "product15.spec.clasp": "Lobster",
     "product16.spec.material": "14K Gold Plated 925 Sterling Silver",
     "product16.spec.stone": "Zircon",
+    "product17.spec.material": "14K Gold / 14K Gold Plated 925 Sterling Silver",
+    "product17.spec.stone": "Lab-Grown Diamond",
 
     // Story page
     "story.hero.subtitle": "Rosary",
@@ -408,6 +414,10 @@ const translations = {
     "product16.type": "Saç Aksesuarı",
     "product16.fulltype": "Zirkon Taşlı Altın Kaplama Saç Tokası",
     "product16.desc": "925 ayar gümüşten üretilen bir saç tokası; yüzeyi Viking dönemine özgü geometrik motiflerle işlenmiş ve zirkon taşlarla bezenmiştir.",
+    "product17.name": "Yıldız Kolye Ucu",
+    "product17.type": "Kolye Ucu",
+    "product17.fulltype": "Lab-Grown Pırlanta Yıldızlı Altın Kolye Ucu",
+    "product17.desc": "Yüzeyi lazerle işlenmiş bir kolye ucu; merkezinde lab-grown pırlanta yıldız formunda oturtulmuştur. İnce kazıma deseni ile taşın ışığı yüzey boyunca buluşuyor.",
     "inquire": "İletişime Geçin",
     "product.back": "\u2190 Koleksiyona D\u00f6n",
     "product.viewDetails": "Detaylar\u0131 G\u00f6r",
@@ -528,6 +538,8 @@ const translations = {
     "product15.spec.clasp": "Lobster",
     "product16.spec.material": "925 G\u00fcm\u00fc\u015f \u00dczeri 14K Alt\u0131n Kaplama",
     "product16.spec.stone": "Zirkon",
+    "product17.spec.material": "14K Alt\u0131n / 925 G\u00fcm\u00fc\u015f \u00dczeri 14K Alt\u0131n Kaplama",
+    "product17.spec.stone": "Lab-Grown P\u0131rlanta",
 
     // Story page
     "story.hero.subtitle": "Rosary",
