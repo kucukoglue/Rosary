@@ -948,6 +948,18 @@ section {
   letter-spacing: 0.02em;
 }
 
+.price-value .price-original {
+  color: var(--color-warm-gray);
+  opacity: 0.65;
+  font-weight: 400;
+  margin-right: 0.45rem;
+}
+
+.price-value .price-discounted {
+  color: var(--color-pink-dark);
+  font-weight: 500;
+}
+
 .product-actions .view-details-btn,
 .product-actions .inquire-btn {
   margin-top: 1.5rem;
