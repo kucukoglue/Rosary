@@ -329,6 +329,8 @@
             <div class="filter-options">
               <button class="toolbar-btn active" onclick="sortProducts('newest')" data-i18n="filter.newest">Newest</button>
               <button class="toolbar-btn" onclick="sortProducts('oldest')" data-i18n="filter.oldest">Oldest</button>
+              <button class="toolbar-btn" onclick="sortProducts('priceAsc')" data-i18n="filter.priceAsc">Price ↑</button>
+              <button class="toolbar-btn" onclick="sortProducts('priceDesc')" data-i18n="filter.priceDesc">Price ↓</button>
             </div>
           </div>
           <div class="filter-group">
@@ -985,10 +987,31 @@
     }
 
     // Sort products
+    function getMinPrice(card) {
+      // Returns the lowest numeric price found in the card; Infinity if none.
+      const values = card.querySelectorAll('.price-value');
+      let min = Infinity;
+      values.forEach(v => {
+        // Prefer discounted price if present, else first numeric token
+        const discounted = v.querySelector('.price-discounted');
+        const text = (discounted ? discounted.textContent : v.textContent).replace(/\./g, '').replace(/[^\d]/g, '');
+        if (text) {
+          const n = parseInt(text, 10);
+          if (!isNaN(n) && n < min) min = n;
+        }
+      });
+      return min;
+    }
+
     function sortProducts(order) {
       const grid = document.querySelector('.products-grid');
       const items = Array.from(grid.children).filter(el => el.classList.contains('product-detail'));
       items.sort((a, b) => {
+        if (order === 'priceAsc' || order === 'priceDesc') {
+          const pa = getMinPrice(a);
+          const pb = getMinPrice(b);
+          return order === 'priceAsc' ? pa - pb : pb - pa;
+        }
         const numA = parseInt(a.id.replace('product-', ''));
         const numB = parseInt(b.id.replace('product-', ''));
         return order === 'newest' ? numB - numA : numA - numB;
