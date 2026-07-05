@@ -63,6 +63,9 @@ const translations = {
     "footer.desc": "Nature-inspired jewellery, designed in Istanbul and shaped in Grand Bazaar workshops. Where wax mould making, CAD design and traditional craft meet conscious production.",
     "footer.explore": "Explore",
     "footer.contact": "Contact",
+    "footer.policies": "Policies",
+    "footer.shipping": "Shipping",
+    "footer.returns": "Returns",
     "footer.location": "Istanbul, Turkey",
     "footer.copy": "\u00a9 2026 Rosary Fine Jewellery. All rights reserved.",
 
