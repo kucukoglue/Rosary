@@ -106,6 +106,13 @@
         pulse(selected.querySelectorAll('.color-btn'));
         return;
       }
+      // If this product has a ring size selector, require one to be picked
+      const sizeSelector = context.querySelector('.ring-size-selector');
+      const selectedSize = sizeSelector ? sizeSelector.querySelector('.size-btn.selected') : null;
+      if (sizeSelector && !selectedSize) {
+        pulse(sizeSelector.querySelectorAll('.size-btn'));
+        return;
+      }
       const productName = btn.dataset.productName || '';
       const label = selected.querySelector('.price-label');
       const value = selected.querySelector('.price-value');
@@ -113,8 +120,7 @@
       const discounted = value ? value.querySelector('.price-discounted') : null;
       const price = discounted ? discounted.textContent.trim() : (value ? value.textContent.trim() : '');
       const colorText = selectedColor ? ' (' + selectedColor.textContent.trim() + ')' : '';
-      const sizeBtn = context.querySelector('.ring-size-selector .size-btn.selected');
-      const sizeText = sizeBtn ? '\nÖlçü: ' + sizeBtn.textContent.trim() : '';
+      const sizeText = selectedSize ? '\nÖlçü: ' + selectedSize.textContent.trim() : '';
       const pageUrl = window.location.href;
       const message =
         'Merhaba, ' + productName + ' siparişi vermek istiyorum.\n' +

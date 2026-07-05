@@ -1105,6 +1105,12 @@ section {
   color: var(--color-pink-dark);
 }
 
+.size-btn.needs-attention:not(.selected) {
+  animation: colorAttentionPulse 0.5s ease-in-out 3;
+  border-color: var(--color-pink-dark);
+  color: var(--color-pink-dark);
+}
+
 .order-btn {
   display: inline-block;
   margin-top: 1.5rem;
