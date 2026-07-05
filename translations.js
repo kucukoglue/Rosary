@@ -438,7 +438,7 @@ const translations = {
     "product18.name": "Toi et Moi Lab-Grown Pırlanta Yüzük",
     "product18.type": "Yüzük",
     "product18.fulltype": "14K Altın Lab-Grown Pırlantalı Toi et Moi Yüzük",
-    "product18.desc": "Fransızca 'sen ve ben' anlamına gelen Toi et Moi, yan yana yerleştirilen iki taşla iki ruhun bir araya gelişini anlatır; tarih boyunca aşkın, bağlılığın ve eşit ortaklığın simgesi olarak görülmüştür. Bu yüzükte IGI sertifikalı 1 ct ve 3 ct D/E renk lab-grown pırlantalar 14K altın montür üzerinde birlikte oturtulmuştur. Sarı veya beyaz altın olarak talep edilebilir.",
+    "product18.desc": "Fransızca 'sen ve ben' anlamına gelen Toi et Moi, yan yana yerleştirilen iki taşla iki ruhun bir araya gelişini anlatır; tarih boyunca aşkın, bağlılığın ve eşit ortaklığın simgesi olarak görülmüştür. Bu yüzükte IGI sertifikalı 1 ct ve 3 ct D/E renk lab-grown pırlantalar 14K altın montür üzerinde birlikte oturtulmuştur. Sarı veya beyaz altın olarak sipariş verilebilir.",
     "product19.name": "Toi et Moi Renkli Taşlı Yüzük",
     "product19.type": "Yüzük",
     "product19.fulltype": "Renkli Taşlı Toi et Moi Yüzük",
