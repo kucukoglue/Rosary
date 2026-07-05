@@ -35,12 +35,40 @@
   // Also run on language change (translations may update prices later)
   window.addEventListener('rosary-lang-changed', init);
 
+  function pulse(elements, ms) {
+    elements.forEach(el => el.classList.add('needs-attention'));
+    setTimeout(() => {
+      elements.forEach(el => el.classList.remove('needs-attention'));
+    }, ms || 1500);
+  }
+
   document.addEventListener('click', function (e) {
+    // Color button click (inside a price row)
+    const colorBtn = e.target.closest('.color-btn');
+    if (colorBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      const row = colorBtn.closest('.price-row');
+      if (row && !row.classList.contains('unavailable')) {
+        // Ensure the parent row is selected first
+        const block = row.parentNode;
+        block.querySelectorAll('.price-row').forEach(r => r.classList.remove('selected'));
+        row.classList.add('selected');
+        // Update color selection
+        row.querySelectorAll('.color-btn').forEach(b => b.classList.remove('selected'));
+        colorBtn.classList.add('selected');
+      }
+      return;
+    }
+
     // Select a price row
     const row = e.target.closest('.price-row');
     if (row && row.closest('.product-pricing') && !row.classList.contains('unavailable')) {
       const block = row.parentNode;
-      block.querySelectorAll('.price-row').forEach(r => r.classList.remove('selected'));
+      block.querySelectorAll('.price-row').forEach(r => {
+        r.classList.remove('selected');
+        r.querySelectorAll('.color-btn.selected').forEach(b => b.classList.remove('selected'));
+      });
       row.classList.add('selected');
       return;
     }
@@ -55,12 +83,14 @@
       if (!pricing) return;
       const selected = pricing.querySelector('.price-row.selected');
       if (!selected) {
-        // No option chosen — visually flash the selectable rows for ~3.2s
-        const rows = pricing.querySelectorAll('.price-row:not(.unavailable)');
-        rows.forEach(r => r.classList.add('needs-attention'));
-        setTimeout(() => {
-          rows.forEach(r => r.classList.remove('needs-attention'));
-        }, 1500);
+        pulse(pricing.querySelectorAll('.price-row:not(.unavailable)'));
+        return;
+      }
+      // If this row offers color options, require one to be picked
+      const colorOptions = selected.querySelector('.color-options');
+      const selectedColor = selected.querySelector('.color-btn.selected');
+      if (colorOptions && !selectedColor) {
+        pulse(selected.querySelectorAll('.color-btn'));
         return;
       }
       const productName = btn.dataset.productName || '';
@@ -68,10 +98,11 @@
       const value = selected.querySelector('.price-value');
       const material = label ? label.textContent.trim() : '';
       const price = value ? value.textContent.trim() : '';
+      const colorText = selectedColor ? ' (' + selectedColor.textContent.trim() + ')' : '';
       const pageUrl = window.location.href;
       const message =
         'Merhaba, ' + productName + ' siparişi vermek istiyorum.\n' +
-        'Seçim: ' + material + ' — ' + price + '\n' +
+        'Seçim: ' + material + colorText + ' — ' + price + '\n' +
         pageUrl;
       window.open(WHATSAPP + '?text=' + encodeURIComponent(message), '_blank');
     }

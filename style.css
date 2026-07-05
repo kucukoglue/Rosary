@@ -960,6 +960,45 @@ section {
   opacity: 0.45;
 }
 
+.price-row {
+  flex-wrap: wrap;
+}
+
+.price-row .color-options {
+  flex-basis: 100%;
+  display: none;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.price-row.selected .color-options {
+  display: flex;
+}
+
+.color-btn {
+  padding: 4px 12px;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--color-sage-dark);
+  border: 1px solid var(--color-sage);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.color-btn:hover {
+  background: var(--color-cream);
+}
+
+.color-btn.selected {
+  background: var(--color-sage);
+  color: var(--color-cream-light);
+  border-color: var(--color-sage);
+}
+
 @keyframes priceAttentionPulse {
   0%, 100% {
     background: transparent;
@@ -990,6 +1029,33 @@ section {
 
 .price-row.needs-attention:not(.unavailable):not(.selected) .price-label,
 .price-row.needs-attention:not(.unavailable):not(.selected) .price-value {
+  color: var(--color-pink-dark);
+}
+
+@keyframes colorAttentionPulse {
+  0%, 100% {
+    background: transparent;
+    border-color: var(--color-pink-dark);
+    color: var(--color-pink-dark);
+    transform: translateX(0);
+  }
+  25% {
+    background: rgba(135, 0, 47, 0.12);
+    transform: translateX(-2px);
+  }
+  50% {
+    background: rgba(135, 0, 47, 0.18);
+    transform: translateX(0);
+  }
+  75% {
+    background: rgba(135, 0, 47, 0.12);
+    transform: translateX(2px);
+  }
+}
+
+.color-btn.needs-attention:not(.selected) {
+  animation: colorAttentionPulse 0.5s ease-in-out 3;
+  border-color: var(--color-pink-dark);
   color: var(--color-pink-dark);
 }
 
