@@ -999,6 +999,52 @@ section {
   border-color: var(--color-sage);
 }
 
+.ring-size-selector {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  align-items: center;
+}
+
+.ring-size-selector .ring-size-label {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-warm-gray);
+}
+
+.size-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.size-btn {
+  min-width: 34px;
+  padding: 4px 8px;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  background: transparent;
+  color: var(--color-sage-dark);
+  border: 1px solid var(--color-sage);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.size-btn:hover {
+  background: var(--color-cream);
+}
+
+.size-btn.selected {
+  background: var(--color-sage);
+  color: var(--color-cream-light);
+  border-color: var(--color-sage);
+}
+
 @keyframes priceAttentionPulse {
   0%, 100% {
     background: transparent;

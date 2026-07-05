@@ -43,6 +43,19 @@
   }
 
   document.addEventListener('click', function (e) {
+    // Ring size button click
+    const sizeBtn = e.target.closest('.size-btn');
+    if (sizeBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      const selector = sizeBtn.closest('.ring-size-selector');
+      if (selector) {
+        selector.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
+        sizeBtn.classList.add('selected');
+      }
+      return;
+    }
+
     // Color button click (inside a price row)
     const colorBtn = e.target.closest('.color-btn');
     if (colorBtn) {
@@ -100,10 +113,12 @@
       const discounted = value ? value.querySelector('.price-discounted') : null;
       const price = discounted ? discounted.textContent.trim() : (value ? value.textContent.trim() : '');
       const colorText = selectedColor ? ' (' + selectedColor.textContent.trim() + ')' : '';
+      const sizeBtn = context.querySelector('.ring-size-selector .size-btn.selected');
+      const sizeText = sizeBtn ? '\nÖlçü: ' + sizeBtn.textContent.trim() : '';
       const pageUrl = window.location.href;
       const message =
         'Merhaba, ' + productName + ' siparişi vermek istiyorum.\n' +
-        'Seçim: ' + material + colorText + ' — ' + price + '\n' +
+        'Seçim: ' + material + colorText + ' — ' + price + sizeText + '\n' +
         pageUrl;
       window.open(WHATSAPP + '?text=' + encodeURIComponent(message), '_blank');
     }
