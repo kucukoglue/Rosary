@@ -97,7 +97,8 @@
       const label = selected.querySelector('.price-label');
       const value = selected.querySelector('.price-value');
       const material = label ? label.textContent.trim() : '';
-      const price = value ? value.textContent.trim() : '';
+      const discounted = value ? value.querySelector('.price-discounted') : null;
+      const price = discounted ? discounted.textContent.trim() : (value ? value.textContent.trim() : '');
       const colorText = selectedColor ? ' (' + selectedColor.textContent.trim() + ')' : '';
       const pageUrl = window.location.href;
       const message =

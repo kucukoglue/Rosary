@@ -1098,6 +1098,7 @@ section {
   opacity: 0.65;
   font-weight: 400;
   margin-right: 0.45rem;
+  text-decoration: line-through;
 }
 
 .price-value .price-discounted {
