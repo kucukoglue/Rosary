@@ -984,7 +984,7 @@ section {
 }
 
 .price-row.needs-attention:not(.unavailable):not(.selected) {
-  animation: priceAttentionPulse 0.5s ease-in-out 4;
+  animation: priceAttentionPulse 0.5s ease-in-out 3;
   border-color: var(--color-pink-dark);
 }
 

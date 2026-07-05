@@ -60,7 +60,7 @@
         rows.forEach(r => r.classList.add('needs-attention'));
         setTimeout(() => {
           rows.forEach(r => r.classList.remove('needs-attention'));
-        }, 2000);
+        }, 1500);
         return;
       }
       const productName = btn.dataset.productName || '';
