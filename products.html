@@ -1447,20 +1447,29 @@
     }
 
     // Sort products
-    function getMinPrice(card) {
-      // Returns the lowest numeric price found in the card; Infinity if none.
+    function extractPrices(card) {
+      // Returns array of numeric prices in this card. Discounted preferred when a row has it.
       const values = card.querySelectorAll('.price-value');
-      let min = Infinity;
+      const prices = [];
       values.forEach(v => {
-        // Prefer discounted price if present, else first numeric token
         const discounted = v.querySelector('.price-discounted');
         const text = (discounted ? discounted.textContent : v.textContent).replace(/\./g, '').replace(/[^\d]/g, '');
         if (text) {
           const n = parseInt(text, 10);
-          if (!isNaN(n) && n < min) min = n;
+          if (!isNaN(n)) prices.push(n);
         }
       });
-      return min;
+      return prices;
+    }
+
+    function getMinPrice(card) {
+      const p = extractPrices(card);
+      return p.length ? Math.min.apply(null, p) : Infinity;
+    }
+
+    function getMaxPrice(card) {
+      const p = extractPrices(card);
+      return p.length ? Math.max.apply(null, p) : -Infinity;
     }
 
     function sortProducts(order) {
@@ -1468,8 +1477,8 @@
       const items = Array.from(grid.children).filter(el => el.classList.contains('product-detail'));
       items.sort((a, b) => {
         if (order === 'priceAsc' || order === 'priceDesc') {
-          const pa = getMinPrice(a);
-          const pb = getMinPrice(b);
+          const pa = order === 'priceAsc' ? getMinPrice(a) : getMaxPrice(a);
+          const pb = order === 'priceAsc' ? getMinPrice(b) : getMaxPrice(b);
           return order === 'priceAsc' ? pa - pb : pb - pa;
         }
         const numA = parseInt(a.id.replace('product-', ''));
