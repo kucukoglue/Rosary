@@ -55,7 +55,12 @@
       if (!pricing) return;
       const selected = pricing.querySelector('.price-row.selected');
       if (!selected) {
-        alert('Lütfen bir malzeme seçeneği seçin.');
+        // No option chosen — visually flash the selectable rows for ~3.2s
+        const rows = pricing.querySelectorAll('.price-row:not(.unavailable)');
+        rows.forEach(r => r.classList.add('needs-attention'));
+        setTimeout(() => {
+          rows.forEach(r => r.classList.remove('needs-attention'));
+        }, 3200);
         return;
       }
       const productName = btn.dataset.productName || '';

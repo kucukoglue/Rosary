@@ -960,6 +960,39 @@ section {
   opacity: 0.45;
 }
 
+@keyframes priceAttentionPulse {
+  0%, 100% {
+    background: transparent;
+    border-color: var(--color-pink-dark);
+    transform: translateX(0);
+  }
+  25% {
+    background: rgba(135, 0, 47, 0.10);
+    border-color: var(--color-pink-dark);
+    transform: translateX(-3px);
+  }
+  50% {
+    background: rgba(135, 0, 47, 0.14);
+    border-color: var(--color-pink-dark);
+    transform: translateX(0);
+  }
+  75% {
+    background: rgba(135, 0, 47, 0.10);
+    border-color: var(--color-pink-dark);
+    transform: translateX(3px);
+  }
+}
+
+.price-row.needs-attention:not(.unavailable):not(.selected) {
+  animation: priceAttentionPulse 0.8s ease-in-out 4;
+  border-color: var(--color-pink-dark);
+}
+
+.price-row.needs-attention:not(.unavailable):not(.selected) .price-label,
+.price-row.needs-attention:not(.unavailable):not(.selected) .price-value {
+  color: var(--color-pink-dark);
+}
+
 .order-btn {
   display: inline-block;
   margin-top: 1.5rem;
