@@ -2093,8 +2093,19 @@ footer {
 }
 
 @media (max-width: 600px) {
+  /* Telefonda öne çıkanlar/yeni eklenenler fotoğrafları %20 küçültüldü,
+     aralardaki ve yanlardaki boşluklar orantılı azaltıldı */
   .featured-grid .product-card {
-    flex: 0 0 55%;
+    flex: 0 0 44%;
+  }
+
+  .featured-grid {
+    gap: 0.64rem;
+  }
+
+  .featured {
+    padding-left: 0.72rem;
+    padding-right: 0.72rem;
   }
 
   /* Telefonda banner (büyük foto) yüksekliği yarıya indirildi;
