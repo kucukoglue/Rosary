@@ -1893,6 +1893,33 @@ footer {
   color: rgba(0, 0, 0, 0.55);
 }
 
+/* İletişim: Instagram + mail ikon satırı */
+.footer-links .footer-social {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.2rem 0 0.6rem;
+}
+
+.footer-links .footer-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  color: #000000;
+  font-size: 0.95rem;
+}
+
+.footer-links .footer-social a:hover {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.footer-links .footer-social svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
 /* İletişim altındaki 'Şimdi İletişime Geçin' WhatsApp butonu */
 .footer-links a.footer-wa-btn {
   display: inline-block;
