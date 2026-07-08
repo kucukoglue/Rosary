@@ -1139,6 +1139,17 @@ section {
   letter-spacing: 0.04em;
 }
 
+/* Telefonda gösterilen sade tek fiyat satırı (masaüstünde gizli) */
+.mobile-price {
+  display: none;
+  margin-top: 0.6rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--color-sage-dark);
+}
+
 .price-value {
   color: var(--color-sage-dark);
   font-weight: 500;
@@ -1835,33 +1846,22 @@ footer {
     display: none !important;
   }
 
-  /* Telefon/kompakt düzende fiyatlar tam görünsün:
-     etiket ile fiyatı alt alta koyarak dar sütunda kırpılmayı önler */
-  .products-grid.grid-3 .price-row,
-  .products-grid.grid-4 .price-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.1rem;
-    padding: 0.25rem 0.1rem;
+  /* Sade telefon kartı (görsel + ad + tek fiyat):
+     uzun açıklama/tür satırı ve detaylı fiyat kutusu gizlenir */
+  .products-grid.grid-3 .product-detail-info .product-type,
+  .products-grid.grid-4 .product-detail-info .product-type {
+    display: none;
   }
 
-  .products-grid.grid-3 .price-value,
-  .products-grid.grid-4 .price-value {
-    font-size: 0.92rem;
+  .products-grid.grid-3 .product-pricing,
+  .products-grid.grid-4 .product-pricing {
+    display: none;
   }
 
-  /* Sipariş telefonda kapalı olduğundan renk seçici (Sarı/Beyaz)
-     gösterilmez — dar sütundan taşıp fiyatı kırpıyordu */
-  .products-grid.grid-3 .price-row .color-options,
-  .products-grid.grid-4 .price-row .color-options {
-    display: none !important;
-  }
-
-  /* Seçili fiyat kutusu vurgusu kaldırılır; tüm fiyatlar sade ve eşit görünür */
-  .products-grid.grid-3 .price-row.selected,
-  .products-grid.grid-4 .price-row.selected {
-    background: transparent;
-    border-color: transparent;
+  /* JS ile hesaplanan tek "başlayan fiyat" yalnızca telefonda gösterilir */
+  .products-grid.grid-3 .mobile-price,
+  .products-grid.grid-4 .mobile-price {
+    display: block;
   }
 
   /* Telefon/kompakt düzende sipariş ver / detayları gör / iletişime geç butonları gizli */

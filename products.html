@@ -1502,5 +1502,52 @@
   <script defer src="/_vercel/insights/script.js"></script>
   <script defer src="/_vercel/speed-insights/script.js"></script>
   <script src="order.js"></script>
+  <script>
+    // Telefonda sade kart: her ürün için tek "başlayan fiyat" satırı üret
+    (function () {
+      function cardPrices(card) {
+        var prices = [];
+        card.querySelectorAll('.product-pricing .price-value').forEach(function (v) {
+          var disc = v.querySelector('.price-discounted');
+          var text = (disc ? disc.textContent : v.textContent).replace(/\./g, '').replace(/[^\d]/g, '');
+          if (text) { var n = parseInt(text, 10); if (!isNaN(n) && n > 0) prices.push(n); }
+        });
+        return prices;
+      }
+      function formatTL(n) { return n.toLocaleString('tr-TR') + ' ₺'; }
+      function renderMobilePrices() {
+        var lang = (document.documentElement.lang === 'en') ? 'en' : 'tr';
+        document.querySelectorAll('.product-detail').forEach(function (card) {
+          var info = card.querySelector('.product-detail-info');
+          if (!info) return;
+          var prices = cardPrices(card);
+          var el = info.querySelector('.mobile-price');
+          if (!prices.length) { if (el) el.textContent = ''; return; }
+          if (!el) {
+            el = document.createElement('div');
+            el.className = 'mobile-price';
+            var pricing = info.querySelector('.product-pricing');
+            if (pricing) pricing.insertAdjacentElement('afterend', el);
+            else info.appendChild(el);
+          }
+          var min = Math.min.apply(null, prices);
+          var multiple = prices.length > 1 && Math.max.apply(null, prices) !== min;
+          if (multiple) {
+            el.textContent = (lang === 'en') ? ('From ' + formatTL(min)) : (formatTL(min) + '’den başlayan');
+          } else {
+            el.textContent = formatTL(min);
+          }
+        });
+      }
+      window.renderMobilePrices = renderMobilePrices;
+      // Dil değişince "başlayan / From" ibaresi güncellensin
+      if (typeof window.setLanguage === 'function') {
+        var _setLanguage = window.setLanguage;
+        window.setLanguage = function (lang) { _setLanguage(lang); renderMobilePrices(); };
+      }
+      document.addEventListener('DOMContentLoaded', renderMobilePrices);
+      if (document.readyState !== 'loading') renderMobilePrices();
+    })();
+  </script>
 </body>
 </html>
