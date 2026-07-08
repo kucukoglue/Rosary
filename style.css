@@ -2068,6 +2068,12 @@ footer {
     flex: 0 0 55%;
   }
 
+  /* Telefonda banner (büyük foto) yüksekliği yarıya indirildi */
+  .hero {
+    height: 35vh;
+    padding-bottom: 2.5rem;
+  }
+
   .hero-content h1 {
     font-size: 2.2rem;
   }
