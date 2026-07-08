@@ -129,6 +129,39 @@ header.scrolled .nav-logo {
   color: var(--color-sage-dark);
 }
 
+/* Ana sayfa: ROSARY logosunun altındaki sosyal ikonlar */
+.nav-logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+
+.nav-social {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.nav-social a {
+  display: inline-flex;
+  color: var(--color-cream-light);
+  transition: color var(--transition), opacity var(--transition);
+}
+
+.nav-social a:hover {
+  opacity: 0.65;
+}
+
+.nav-social svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+header.scrolled .nav-social a {
+  color: var(--color-sage-dark);
+}
+
 .nav-links {
   display: flex;
   gap: 2.5rem;
