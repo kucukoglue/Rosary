@@ -2004,3 +2004,75 @@ footer {
     height: 350px;
   }
 }
+
+/* ================================================================
+   KOLEKSİYON SAYFASI — KOYU KAHVE DENEMESİ (v2)
+   Çok koyu kahve zemin + #f6eab0 açık altın yazılar.
+   GERİ ALMAK İÇİN: bu bloğu sil + products.html'de body sınıfı
+   "collection-page" -> kaldır. (v1'e dönüş)
+   ================================================================ */
+.collection-page {
+  background-color: #1c0f06;
+}
+
+.collection-page main,
+.collection-page .products-section {
+  background-color: #1c0f06;
+}
+
+/* Üst menü çubuğu koyu kahve, yazılar açık altın */
+.collection-page header.scrolled {
+  background: rgba(28, 15, 6, 0.95);
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.4);
+}
+.collection-page header.scrolled .nav-logo,
+.collection-page header.scrolled .nav-links a,
+.collection-page header.scrolled .lang-btn,
+.collection-page header.scrolled .lang-sep {
+  color: #f6eab0;
+}
+.collection-page header.scrolled .menu-toggle span {
+  background: #f6eab0;
+}
+
+/* Başlık bölümü yazıları */
+.collection-page .section-header .subtitle,
+.collection-page .section-header h2,
+.collection-page .section-header p {
+  color: #f6eab0;
+}
+.collection-page .section-divider {
+  background: #f6eab0;
+  opacity: 0.6;
+}
+
+/* Filtre / sırala çubuğu */
+.collection-page .products-toolbar {
+  border-bottom-color: rgba(246, 234, 176, 0.18);
+}
+.collection-page .filter-label,
+.collection-page .filter-toggle,
+.collection-page .filter-btn,
+.collection-page .material-btn,
+.collection-page .toolbar-btn {
+  color: #f6eab0;
+}
+.collection-page .filter-btn:hover,
+.collection-page .material-btn:hover,
+.collection-page .toolbar-btn:hover {
+  color: #fff;
+}
+.collection-page .filter-btn.active,
+.collection-page .material-btn.active,
+.collection-page .toolbar-btn.active {
+  color: #fff;
+  border-bottom-color: #f6eab0;
+}
+.collection-page .products-toolbar.filters-open .toolbar-filters {
+  border-top-color: rgba(246, 234, 176, 0.18);
+}
+
+/* Ürün kartında görsel üstüne binen ad + fiyat */
+.collection-page .card-overlay {
+  color: #f6eab0;
+}
