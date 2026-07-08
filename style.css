@@ -662,6 +662,14 @@ section {
   background: #ffffff;
 }
 
+/* Ana sayfa ve blog sayfası arka planı */
+.home-page,
+.home-page .featured,
+.blog-page,
+.blog-page .featured {
+  background: #f8f6f3;
+}
+
 .story-contact .hero-cta:hover {
   background: #4a0e1e;
   color: var(--color-cream-light);
