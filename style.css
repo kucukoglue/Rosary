@@ -2027,6 +2027,11 @@ footer {
   background-color: #ffffff;
 }
 
+/* Banner (page-hero) kaldırıldı; içerik sabit menünün altından başlasın */
+.collection-page main {
+  margin-top: var(--header-height);
+}
+
 /* Aktif menü ("Koleksiyon") altındaki çizgi bordo */
 .collection-page header.scrolled .nav-links a::after {
   background: var(--color-pink-dark);
