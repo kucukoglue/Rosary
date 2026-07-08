@@ -2014,85 +2014,13 @@ footer {
 }
 
 /* ================================================================
-   KOLEKSİYON SAYFASI — KOYU KAHVE DENEMESİ (v2)
-   Çok koyu kahve zemin + #f6eab0 açık altın yazılar.
-   GERİ ALMAK İÇİN: bu bloğu sil + products.html'de body sınıfı
-   "collection-page" -> kaldır. (v1'e dönüş)
+   KOLEKSİYON SAYFASI — yapısal stiller (v1 RENKLERİ korunur)
+   Koyu kahve + altın renk denemesi geri alındı; sadece düzen/boşluk/
+   karartma/kart stilleri korundu. Renkler orijinal (krem/adaçayı) hâline
+   döndü.
    ================================================================ */
-.collection-page {
-  background-color: #1c0f06;
-}
 
-.collection-page main,
-.collection-page .products-section {
-  background-color: #1c0f06;
-}
-
-/* Üst menü çubuğu koyu kahve, yazılar açık altın */
-.collection-page header.scrolled {
-  background: rgba(28, 15, 6, 0.95);
-  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.4);
-}
-.collection-page header.scrolled .nav-logo,
-.collection-page header.scrolled .nav-links a,
-.collection-page header.scrolled .lang-btn,
-.collection-page header.scrolled .lang-sep {
-  color: #f6eab0;
-}
-.collection-page header.scrolled .menu-toggle span {
-  background: #f6eab0;
-}
-
-/* Başlık bölümü yazıları */
-.collection-page .section-header .subtitle,
-.collection-page .section-header h2,
-.collection-page .section-header p {
-  color: #f6eab0;
-}
-.collection-page .section-divider {
-  background: #f6eab0;
-  opacity: 0.6;
-}
-
-/* Filtre / sırala çubuğu */
-.collection-page .products-toolbar {
-  border-bottom-color: rgba(246, 234, 176, 0.18);
-}
-.collection-page .filter-label,
-.collection-page .filter-toggle,
-.collection-page .filter-btn,
-.collection-page .material-btn,
-.collection-page .toolbar-btn {
-  color: #f6eab0;
-}
-.collection-page .filter-btn:hover,
-.collection-page .material-btn:hover,
-.collection-page .toolbar-btn:hover {
-  color: #fbf1c4;
-}
-.collection-page .filter-btn.active,
-.collection-page .material-btn.active,
-.collection-page .toolbar-btn.active {
-  color: #d4bb6e;
-  font-weight: 600;
-  border-bottom-color: #d4bb6e;
-}
-.collection-page .products-toolbar.filters-open .toolbar-filters {
-  border-top-color: rgba(246, 234, 176, 0.18);
-}
-
-/* Ürün kartında görsel üstüne binen ad + fiyat */
-.collection-page .card-overlay {
-  color: #f6eab0;
-}
-
-/* En üstteki görsel üzerindeki "Koleksiyon" başlığı açık altın */
-.collection-page .page-hero h1 {
-  color: #f6eab0;
-}
-
-/* Aktif menü ("Koleksiyon") altındaki çizgi anasayfadaki gibi pembe
-   (kırmızı/bordo değil) */
+/* Aktif menü ("Koleksiyon") altındaki çizgi anasayfadaki gibi pembe */
 .collection-page header.scrolled .nav-links a::after {
   background: var(--color-pink);
 }
@@ -2157,6 +2085,6 @@ footer {
     font-weight: 400;
     line-height: 1.35;
     letter-spacing: 0.03em;
-    color: #f6eab0;
+    color: var(--color-sage-dark);
   }
 }
