@@ -322,9 +322,9 @@ header.scrolled .menu-toggle span {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(44, 44, 44, 0.2) 0%,
-    rgba(44, 44, 44, 0.35) 50%,
-    rgba(44, 44, 44, 0.5) 100%
+    rgba(44, 44, 44, 0.18) 0%,
+    rgba(44, 44, 44, 0.315) 50%,
+    rgba(44, 44, 44, 0.45) 100%
   );
 }
 
