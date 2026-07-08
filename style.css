@@ -1835,6 +1835,27 @@ footer {
     display: none !important;
   }
 
+  /* Telefon/kompakt düzende fiyatlar tam görünsün:
+     etiket ile fiyatı alt alta koyarak dar sütunda kırpılmayı önler */
+  .products-grid.grid-3 .price-row,
+  .products-grid.grid-4 .price-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+    padding: 0.3rem 0.35rem;
+  }
+
+  .products-grid.grid-3 .price-value,
+  .products-grid.grid-4 .price-value {
+    font-size: 0.92rem;
+  }
+
+  /* Telefon/kompakt düzende sipariş ver / detayları gör / iletişime geç butonları gizli */
+  .products-grid.grid-3 .product-actions,
+  .products-grid.grid-4 .product-actions {
+    display: none !important;
+  }
+
   .products-grid.grid-3 .product-thumbnails,
   .products-grid.grid-4 .product-thumbnails {
     display: none !important;
