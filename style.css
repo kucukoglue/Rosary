@@ -960,7 +960,7 @@ section {
 @media (hover: hover) {
   .product-detail:hover .card-overlay {
     opacity: 1;
-    background: rgba(30, 27, 23, 0.75);
+    background: rgba(30, 27, 23, 0.85);
   }
 }
 
