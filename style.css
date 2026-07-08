@@ -1887,6 +1887,12 @@ footer {
     flex: 0 0 40%;
   }
 
+  /* Telefonda yan boşluğu, fotoğraflar arası boşlukla (0.8rem) dengele */
+  .featured {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+
   .products-grid,
   .products-grid.grid-2 {
     grid-template-columns: 1fr;
