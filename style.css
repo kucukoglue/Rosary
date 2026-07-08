@@ -1752,8 +1752,8 @@ section {
 
 /* --- Footer --- */
 footer {
-  background: var(--color-charcoal);
-  color: var(--color-cream-dark);
+  background: rgb(185, 168, 134);
+  color: #000000;
   padding: 4rem 3rem 2rem;
 }
 
@@ -1769,7 +1769,7 @@ footer {
 .footer-brand h3 {
   font-family: var(--font-display);
   font-size: 1.5rem;
-  color: var(--color-cream);
+  color: #000000;
   letter-spacing: 0.12em;
   margin-bottom: 1rem;
 }
@@ -1777,7 +1777,7 @@ footer {
 .footer-brand p {
   font-size: 0.95rem;
   line-height: 1.8;
-  color: var(--color-cream-dark);
+  color: #000000;
   max-width: 350px;
 }
 
@@ -1786,30 +1786,30 @@ footer {
   font-size: 1rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-cream);
+  color: #000000;
   margin-bottom: 1.2rem;
 }
 
 .footer-links a {
   display: block;
   font-size: 0.95rem;
-  color: var(--color-cream-dark);
+  color: #000000;
   margin-bottom: 0.6rem;
   transition: color var(--transition);
 }
 
 .footer-links a:hover {
-  color: var(--color-pink);
+  color: rgba(0, 0, 0, 0.55);
 }
 
 .footer-bottom {
   max-width: var(--max-width);
   margin: 0 auto;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
   text-align: center;
   font-size: 0.85rem;
-  color: var(--color-cream-dark);
+  color: #000000;
   letter-spacing: 0.06em;
 }
 
