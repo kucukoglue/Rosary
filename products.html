@@ -1532,11 +1532,13 @@
           if (!overlay) {
             overlay = document.createElement('div');
             overlay.className = 'card-overlay';
-            overlay.innerHTML = '<div class="card-overlay-name"></div><div class="card-overlay-price"></div>';
+            overlay.innerHTML = '<div class="card-overlay-name"></div><span class="card-overlay-line"></span><div class="card-overlay-price"></div>';
             gallery.appendChild(overlay);
           }
           overlay.querySelector('.card-overlay-name').textContent = name;
           overlay.querySelector('.card-overlay-price').textContent = priceText;
+          var line = overlay.querySelector('.card-overlay-line');
+          if (line) line.style.display = priceText ? '' : 'none';
         });
       }
       // Tüm kart tıklanınca ürün sayfası açılsın (gizli "View Details" linkinden)

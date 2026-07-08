@@ -948,11 +948,19 @@ section {
   letter-spacing: 0.03em;
 }
 
+/* Ad ile fiyatı ayıran ince çizgi (referans site tarzı) */
+.card-overlay-line {
+  width: 30px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.55;
+}
+
 /* Fareli cihazlarda: yalnızca üzerine gelince görün, görsel kararır */
 @media (hover: hover) {
   .product-detail:hover .card-overlay {
     opacity: 1;
-    background: rgba(45, 42, 38, 0.42);
+    background: rgba(40, 36, 32, 0.58);
   }
 }
 
@@ -2060,13 +2068,14 @@ footer {
 .collection-page .filter-btn:hover,
 .collection-page .material-btn:hover,
 .collection-page .toolbar-btn:hover {
-  color: #fff;
+  color: #fbf1c4;
 }
 .collection-page .filter-btn.active,
 .collection-page .material-btn.active,
 .collection-page .toolbar-btn.active {
-  color: #fff;
-  border-bottom-color: #f6eab0;
+  color: #d4bb6e;
+  font-weight: 600;
+  border-bottom-color: #d4bb6e;
 }
 .collection-page .products-toolbar.filters-open .toolbar-filters {
   border-top-color: rgba(246, 234, 176, 0.18);
