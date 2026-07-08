@@ -370,6 +370,25 @@ header.scrolled .menu-toggle span {
   border-color: var(--color-pink);
 }
 
+/* Ana sayfa banner butonu: çerçevesiz, ince alt çizgili link + ok işareti */
+.hero .hero-cta-link {
+  padding: 0 0 4px;
+  border: none;
+  border-bottom: 1px solid var(--color-cream-light);
+  color: var(--color-cream-light);
+  background: transparent;
+}
+
+.hero .hero-cta-link::after {
+  content: " \2192";
+}
+
+.hero .hero-cta-link:hover {
+  background: transparent;
+  color: var(--color-pink);
+  border-bottom-color: var(--color-pink);
+}
+
 /* --- Section Shared --- */
 section {
   padding: 6rem 3rem;
