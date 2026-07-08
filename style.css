@@ -101,7 +101,7 @@ header {
 }
 
 header.scrolled {
-  background: rgba(242, 227, 209, 0.95);
+  background: #eae5db;
   backdrop-filter: blur(10px);
   box-shadow: 0 1px 20px rgba(0, 0, 0, 0.06);
 }
@@ -649,7 +649,7 @@ section {
 }
 
 .story-contact {
-  background: rgb(185, 168, 134);
+  background: #e3dccf;
   padding: 5rem 3rem;
 }
 
