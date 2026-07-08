@@ -2085,3 +2085,24 @@ footer {
 .collection-page .card-overlay {
   color: #f6eab0;
 }
+
+/* En üstteki görsel üzerindeki "Koleksiyon" başlığı açık altın */
+.collection-page .page-hero h1 {
+  color: #f6eab0;
+}
+
+/* Aktif menü ("Koleksiyon") altındaki çizgi anasayfadaki gibi pembe
+   (kırmızı/bordo değil) */
+.collection-page header.scrolled .nav-links a::after {
+  background: var(--color-pink);
+}
+
+/* Ürün kartları köşeli (kare) ve birbirine daha yakın */
+.collection-page .products-grid.grid-3 {
+  gap: 0.3rem;
+}
+.collection-page .product-detail,
+.collection-page .product-gallery,
+.collection-page .product-gallery-main {
+  border-radius: 0;
+}
