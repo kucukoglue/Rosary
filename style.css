@@ -894,6 +894,43 @@ section {
   font-size: 0.8rem;
 }
 
+/* Sade koleksiyon kartı (tüm ekranlar): görsel + ad + tek fiyat.
+   Tür satırı, detaylı fiyat kutusu ve aksiyon butonları gizli;
+   tüm kart tıklanınca ürün sayfası açılır. */
+.products-grid.grid-3 .product-detail-info .product-type,
+.products-grid.grid-4 .product-detail-info .product-type,
+.products-grid.grid-3 .product-pricing,
+.products-grid.grid-4 .product-pricing,
+.products-grid.grid-3 .product-actions,
+.products-grid.grid-4 .product-actions {
+  display: none !important;
+}
+
+.products-grid.grid-3 .card-price,
+.products-grid.grid-4 .card-price {
+  display: block;
+}
+
+.products-grid.grid-3 .product-detail,
+.products-grid.grid-4 .product-detail {
+  cursor: pointer;
+}
+
+/* Masaüstünde (fare olan cihazlarda) fiyat yalnızca kartın üstüne gelince
+   görünür; dokunmatik ekranlarda hover olmadığından fiyat hep görünür kalır */
+@media (min-width: 991px) and (hover: hover) {
+  .products-grid.grid-3 .card-price,
+  .products-grid.grid-4 .card-price {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .products-grid.grid-3 .product-detail:hover .card-price,
+  .products-grid.grid-4 .product-detail:hover .card-price {
+    opacity: 1;
+  }
+}
+
 .product-detail {
   background: transparent;
   border-radius: 1rem;
@@ -1139,8 +1176,8 @@ section {
   letter-spacing: 0.04em;
 }
 
-/* Telefonda gösterilen sade tek fiyat satırı (masaüstünde gizli) */
-.mobile-price {
+/* Sade kartta gösterilen tek fiyat satırı (JS üretir) */
+.card-price {
   display: none;
   margin-top: 0.6rem;
   font-family: var(--font-body);
@@ -1846,29 +1883,8 @@ footer {
     display: none !important;
   }
 
-  /* Sade telefon kartı (görsel + ad + tek fiyat):
-     uzun açıklama/tür satırı ve detaylı fiyat kutusu gizlenir */
-  .products-grid.grid-3 .product-detail-info .product-type,
-  .products-grid.grid-4 .product-detail-info .product-type {
-    display: none;
-  }
-
-  .products-grid.grid-3 .product-pricing,
-  .products-grid.grid-4 .product-pricing {
-    display: none;
-  }
-
-  /* JS ile hesaplanan tek "başlayan fiyat" yalnızca telefonda gösterilir */
-  .products-grid.grid-3 .mobile-price,
-  .products-grid.grid-4 .mobile-price {
-    display: block;
-  }
-
-  /* Telefon/kompakt düzende sipariş ver / detayları gör / iletişime geç butonları gizli */
-  .products-grid.grid-3 .product-actions,
-  .products-grid.grid-4 .product-actions {
-    display: none !important;
-  }
+  /* Not: tür satırı / fiyat kutusu / butonların gizlenmesi ve tek fiyat satırı
+     artık tüm ekranlar için temel kurallarda tanımlı (yukarıda). */
 
   .products-grid.grid-3 .product-thumbnails,
   .products-grid.grid-4 .product-thumbnails {

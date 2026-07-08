@@ -1515,17 +1515,17 @@
         return prices;
       }
       function formatTL(n) { return n.toLocaleString('tr-TR') + ' ₺'; }
-      function renderMobilePrices() {
+      function renderCardPrices() {
         var lang = (document.documentElement.lang === 'en') ? 'en' : 'tr';
         document.querySelectorAll('.product-detail').forEach(function (card) {
           var info = card.querySelector('.product-detail-info');
           if (!info) return;
           var prices = cardPrices(card);
-          var el = info.querySelector('.mobile-price');
+          var el = info.querySelector('.card-price');
           if (!prices.length) { if (el) el.textContent = ''; return; }
           if (!el) {
             el = document.createElement('div');
-            el.className = 'mobile-price';
+            el.className = 'card-price';
             var pricing = info.querySelector('.product-pricing');
             if (pricing) pricing.insertAdjacentElement('afterend', el);
             else info.appendChild(el);
@@ -1539,14 +1539,28 @@
           }
         });
       }
-      window.renderMobilePrices = renderMobilePrices;
-      // Dil değişince "başlayan / From" ibaresi güncellensin
+      // Tüm kart tıklanınca ürün sayfası açılsın (gizli "View Details" linkinden)
+      function wireCardLinks() {
+        document.querySelectorAll('.product-detail').forEach(function (card) {
+          if (card.dataset.linked) return;
+          var link = card.querySelector('a.view-details-btn');
+          if (!link) return;
+          card.dataset.linked = '1';
+          card.addEventListener('click', function (e) {
+            if (e.target.closest('a, button')) return;
+            window.location = link.getAttribute('href');
+          });
+        });
+      }
+      function initCards() { renderCardPrices(); wireCardLinks(); }
+      window.renderCardPrices = renderCardPrices;
+      // Dil değişince fiyat ibaresi (₺ + / From) güncellensin
       if (typeof window.setLanguage === 'function') {
         var _setLanguage = window.setLanguage;
-        window.setLanguage = function (lang) { _setLanguage(lang); renderMobilePrices(); };
+        window.setLanguage = function (lang) { _setLanguage(lang); renderCardPrices(); };
       }
-      document.addEventListener('DOMContentLoaded', renderMobilePrices);
-      if (document.readyState !== 'loading') renderMobilePrices();
+      document.addEventListener('DOMContentLoaded', initCards);
+      if (document.readyState !== 'loading') initCards();
     })();
   </script>
 </body>
