@@ -1468,10 +1468,15 @@ section {
 }
 
 /* --- Blog Listing --- */
+/* Blog: banner (page-hero) kaldırıldı; içerik sabit menünün altından başlasın */
+.blog-page main {
+  margin-top: var(--header-height);
+}
+
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem;
+  gap: 1.6rem 0.3rem;
 }
 
 .blog-card {
@@ -1493,7 +1498,7 @@ section {
 .blog-card-image-wrap {
   overflow: hidden;
   aspect-ratio: 1;
-  border-radius: 1rem;
+  border-radius: 0;
   position: relative;
 }
 
@@ -1566,14 +1571,14 @@ section {
 @media (max-width: 900px) {
   .blog-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 1.4rem 0.6rem;
   }
 }
 
 @media (max-width: 600px) {
   .blog-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem 0.5rem;
   }
 }
 
