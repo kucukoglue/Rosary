@@ -614,10 +614,12 @@
             <div class="filter-options">
               <button class="filter-btn active" onclick="filterType('all')" data-i18n="filter.all">All</button>
               <button class="filter-btn" onclick="filterType('necklace')" data-i18n="filter.necklace">Necklace</button>
+              <button class="filter-btn" onclick="filterType('pendant')" data-i18n="filter.pendant">Pendant</button>
               <button class="filter-btn" onclick="filterType('ring')" data-i18n="filter.ring">Ring</button>
+              <button class="filter-btn" onclick="filterType('ringset')" data-i18n="filter.ringset">Ring Set</button>
               <button class="filter-btn" onclick="filterType('earring')" data-i18n="filter.earring">Earring</button>
               <button class="filter-btn" onclick="filterType('bracelet')" data-i18n="filter.bracelet">Bracelet</button>
-              <button class="filter-btn" onclick="filterType('accessory')" data-i18n="filter.accessory">Hair Accessory</button>
+              <button class="filter-btn" onclick="filterType('hairclip')" data-i18n="filter.hairclip">Hair Clip</button>
             </div>
           </div>
           <div class="filter-group">
@@ -751,7 +753,7 @@
         </div>
 
         <!-- Product 5: Cycle des Papillons Necklace -->
-        <div class="product-detail fade-in" id="product-5" data-type="necklace" data-material="14k">
+        <div class="product-detail fade-in" id="product-5" data-type="pendant" data-material="14k">
           <div class="product-gallery">
             <img src="Product 5/cicek-buketi-rose-altin-kolye-ucu.jpg" alt="Cycle des Papillons Necklace" class="product-gallery-main" loading="lazy" decoding="async" id="main-5">
             <div class="product-thumbnails">
@@ -806,7 +808,7 @@
         </div>
 
         <!-- Product 7: Eye Pendant -->
-        <div class="product-detail fade-in" id="product-7" data-type="necklace" data-material="14k">
+        <div class="product-detail fade-in" id="product-7" data-type="pendant" data-material="14k">
           <div class="product-gallery">
             <img src="Product 7/nazar-rose-altin-kolye-ucu.jpg" alt="Eye Pendant" class="product-gallery-main" loading="lazy" decoding="async" id="main-7">
             <div class="product-thumbnails">
@@ -953,7 +955,7 @@
         </div>
 
         <!-- Product 12: Roses Pendant -->
-        <div class="product-detail fade-in" id="product-12" data-type="necklace" data-material="14k 14k-plated">
+        <div class="product-detail fade-in" id="product-12" data-type="pendant" data-material="14k 14k-plated">
           <div class="product-gallery">
             <img src="Product 12/gul-motifli-altin-kolye.jpg" alt="Roses Pendant" class="product-gallery-main" loading="lazy" decoding="async" id="main-12">
             <div class="product-thumbnails">
@@ -1136,7 +1138,7 @@
         </div>
 
         <!-- Product 22: Wave Form Triple Diamond Ring Set -->
-        <div class="product-detail fade-in" id="product-22" data-type="ring" data-material="14k">
+        <div class="product-detail fade-in" id="product-22" data-type="ringset" data-material="14k">
           <div class="product-gallery">
             <img src="Product 22/dalga-formlu-uclu-lab-grown-pirlantali-yuzuk-seti.png" alt="Wave Form Triple Diamond Ring Set" class="product-gallery-main" loading="lazy" decoding="async" id="main-22">
             <div class="product-thumbnails">
@@ -1159,7 +1161,7 @@
         </div>
 
         <!-- Product 23: Wave Form Triple Coloured Gemstone Ring Set -->
-        <div class="product-detail fade-in" id="product-23" data-type="ring" data-material="14k-plated">
+        <div class="product-detail fade-in" id="product-23" data-type="ringset" data-material="14k-plated">
           <div class="product-gallery">
             <img src="Product 23/dalga-formlu-uclu-renkli-dogal-tasli-yuzuk-seti.jpeg" alt="Wave Form Triple Coloured Gemstone Ring Set" class="product-gallery-main" loading="lazy" decoding="async" id="main-23">
             <div class="product-thumbnails">
@@ -1230,7 +1232,7 @@
         </div>
 
         <!-- Product 17: Star Pendant -->
-        <div class="product-detail fade-in" id="product-17" data-type="necklace" data-material="14k 14k-plated">
+        <div class="product-detail fade-in" id="product-17" data-type="pendant" data-material="14k 14k-plated">
           <div class="product-gallery">
             <img src="Product 17/lazer-cizim-pirlantali-altin-kolye-ucu.jpeg" alt="Lazer Çizim &amp; Pırlantalı Kolye Ucu" class="product-gallery-main" loading="lazy" decoding="async" id="main-17">
             <div class="product-thumbnails">
@@ -1254,7 +1256,7 @@
         </div>
 
         <!-- Product 16: Viking Hair Cuff -->
-        <div class="product-detail fade-in" id="product-16" data-type="accessory" data-material="14k-plated">
+        <div class="product-detail fade-in" id="product-16" data-type="hairclip" data-material="14k-plated">
           <div class="product-gallery">
             <img src="Product 16/viking-altin-sac-tokasi.jpeg" alt="Viking Hair Cuff" class="product-gallery-main" loading="lazy" decoding="async" id="main-16">
             <div class="product-thumbnails">
@@ -1419,27 +1421,51 @@
     let activeType = 'all';
     let activeMaterial = 'all';
 
+    function hasMaterial(el, material) {
+      return material === 'all' || (el.dataset.material || '').split(' ').includes(material);
+    }
+
     function applyFilters() {
       document.querySelectorAll('.product-detail').forEach(el => {
-        const type = el.dataset.type;
-        const material = el.dataset.material;
-        const matchType = activeType === 'all' || type === activeType;
-        const matchMaterial = activeMaterial === 'all' || material.split(' ').includes(activeMaterial);
+        const matchType = activeType === 'all' || el.dataset.type === activeType;
+        const matchMaterial = hasMaterial(el, activeMaterial);
         el.style.display = (matchType && matchMaterial) ? '' : 'none';
       });
+    }
+
+    // Seçili cinse göre materyal seçeneklerini güncelle: o cinste hiç ürünü
+    // olmayan materyal butonu gizlenir; aktif materyal o cinste yoksa 'Tümü'ne
+    // dönülür. Böylece cins seçince asla "ürün yok" durumu oluşmaz.
+    function refreshMaterialOptions() {
+      const inType = Array.from(document.querySelectorAll('.product-detail'))
+        .filter(el => activeType === 'all' || el.dataset.type === activeType);
+      document.querySelectorAll('.material-btn').forEach(btn => {
+        const m = btn.getAttribute('onclick').match(/filterMaterial\('([^']*)'\)/);
+        const mat = m ? m[1] : 'all';
+        const available = mat === 'all' || inType.some(el => hasMaterial(el, mat));
+        btn.style.display = available ? '' : 'none';
+      });
+      const stillAvailable = activeMaterial === 'all' || inType.some(el => hasMaterial(el, activeMaterial));
+      if (!stillAvailable) {
+        activeMaterial = 'all';
+        document.querySelectorAll('.material-btn').forEach(b => b.classList.remove('active'));
+        const allBtn = document.querySelector('.material-btn[onclick*="filterMaterial(\'all\')"]');
+        if (allBtn) allBtn.classList.add('active');
+      }
     }
 
     function filterType(type) {
       activeType = type;
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      event.target.classList.add('active');
+      if (typeof event !== 'undefined' && event.target) event.target.classList.add('active');
+      refreshMaterialOptions();
       applyFilters();
     }
 
     function filterMaterial(material) {
       activeMaterial = material;
       document.querySelectorAll('.material-btn').forEach(b => b.classList.remove('active'));
-      event.target.classList.add('active');
+      if (typeof event !== 'undefined' && event.target) event.target.classList.add('active');
       applyFilters();
     }
 

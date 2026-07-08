@@ -2020,9 +2020,16 @@ footer {
    döndü.
    ================================================================ */
 
-/* Aktif menü ("Koleksiyon") altındaki çizgi anasayfadaki gibi pembe */
+/* Koleksiyon sayfası arka planı tam beyaz */
+.collection-page,
+.collection-page main,
+.collection-page .products-section {
+  background-color: #ffffff;
+}
+
+/* Aktif menü ("Koleksiyon") altındaki çizgi bordo */
 .collection-page header.scrolled .nav-links a::after {
-  background: var(--color-pink);
+  background: var(--color-pink-dark);
 }
 
 /* Ürün kartları köşeli (kare) ve birbirine daha yakın */
