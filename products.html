@@ -1533,7 +1533,7 @@
           var min = Math.min.apply(null, prices);
           var multiple = prices.length > 1 && Math.max.apply(null, prices) !== min;
           if (multiple) {
-            el.textContent = (lang === 'en') ? ('From ' + formatTL(min)) : (formatTL(min) + '’den başlayan');
+            el.textContent = (lang === 'en') ? ('From ' + formatTL(min)) : (formatTL(min) + ' +');
           } else {
             el.textContent = formatTL(min);
           }
