@@ -689,7 +689,7 @@ const translations = {
     "story.val3.text": "Ki\u015fiye \u00f6zel, anlaml\u0131 ve giyilmek i\u00e7in \u00fcretilen \u2014 kutuda durmak i\u00e7in de\u011fil",
     "story.visit.subtitle": "\u0130leti\u015fim",
     "story.visit.title": "\u0130stanbul, T\u00fcrkiye",
-    "story.visit.text": "Bir par\u00e7a hakk\u0131nda sorunuz mu var, \u00f6zel bir tasar\u0131m i\u00e7in bilgi almak m\u0131 istiyorsunuz, yoksa nas\u0131l \u00e7al\u0131\u015ft\u0131\u011f\u0131m\u0131 m\u0131 merak ediyorsunuz? Bize ula\u015f\u0131n, sizden haber almaktan mutluluk duyar\u0131m.",
+    "story.visit.text": "Bir par\u00e7a hakk\u0131nda sorunuz mu var, \u00f6zel bir tasar\u0131m i\u00e7in bilgi almak m\u0131 istiyorsunuz, yoksa nas\u0131l \u00e7al\u0131\u015ft\u0131\u011f\u0131m\u0131 m\u0131 merak ediyorsunuz? Bize ula\u015f\u0131n, sizden haber almaktan mutluluk duyar\u0131z!",
     "story.visit.cta": "\u0130leti\u015fime Ge\u00e7in",
 
     // Blog
