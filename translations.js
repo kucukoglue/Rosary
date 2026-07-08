@@ -63,6 +63,7 @@ const translations = {
     "footer.desc": "Nature-inspired jewellery, designed in Istanbul and shaped in Grand Bazaar workshops. Where wax mould making, CAD design and traditional craft meet conscious production.",
     "footer.explore": "Explore",
     "footer.contact": "Contact",
+    "footer.contactCta": "Get in Touch Now",
     "footer.policies": "Policies",
     "footer.shipping": "Shipping",
     "footer.returns": "Returns",
@@ -431,6 +432,7 @@ const translations = {
     "footer.desc": "Do\u011fadan ilham alan, \u0130stanbul\u2019da tasarlanan ve Kapal\u0131\u00e7ar\u015f\u0131 at\u00f6lyelerinde \u015fekillenen \u00f6zg\u00fcn m\u00fccevherler. Mum kal\u0131p i\u015fleme, CAD tasar\u0131m ve geleneksel zanaatin bulu\u015ftu\u011fu bilin\u00e7li \u00fcretim.",
     "footer.explore": "Ke\u015ffet",
     "footer.contact": "\u0130leti\u015fim",
+    "footer.contactCta": "\u015eimdi \u0130leti\u015fime Ge\u00e7in",
     "footer.location": "\u0130stanbul, T\u00fcrkiye",
     "footer.copy": "\u00a9 2026 Rosary Fine Jewellery. T\u00fcm haklar\u0131 sakl\u0131d\u0131r.",
 
