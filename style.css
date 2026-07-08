@@ -649,8 +649,17 @@ section {
 }
 
 .story-contact {
-  background: var(--color-sage);
+  background: rgb(185, 168, 134);
   padding: 5rem 3rem;
+}
+
+/* Hikayemiz sayfası: banner kaldırıldı, arka plan beyaz */
+.story-page main {
+  margin-top: var(--header-height);
+}
+.story-page,
+.story-page .story-section {
+  background: #ffffff;
 }
 
 .story-contact .hero-cta:hover {
