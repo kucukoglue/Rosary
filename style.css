@@ -2106,3 +2106,57 @@ footer {
 .collection-page .product-gallery-main {
   border-radius: 0;
 }
+
+/* ================================================================
+   TELEFON — koleksiyon kart düzeni
+   - Yan boşluk ile kartlar arası boşluk orantılı
+   - Ürün adı görselin ALTINDA (görsel üstünde katman yok)
+   - Fiyat yazılmaz
+   - Her satırdaki görseller aynı boşlukta ve aynı hizada
+   ================================================================ */
+@media (max-width: 991px) {
+  /* Yan boşluğu azalt; sütun boşluğuyla orantılı olsun */
+  .collection-page .products-section {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+
+  .collection-page .products-grid.grid-3,
+  .collection-page .products-grid.grid-4 {
+    gap: 1.6rem 0.9rem;
+    align-items: start;
+  }
+  .collection-page .products-grid.grid-3 .product-detail,
+  .collection-page .products-grid.grid-4 .product-detail {
+    height: auto;
+  }
+
+  /* Görsel üstündeki ad+fiyat katmanı telefonda kapalı */
+  .collection-page .products-grid.grid-3 .card-overlay,
+  .collection-page .products-grid.grid-4 .card-overlay {
+    display: none !important;
+  }
+
+  /* Ad görselin altında; tür/açıklama/fiyat/butonlar gizli */
+  .collection-page .products-grid.grid-3 .product-detail-info,
+  .collection-page .products-grid.grid-4 .product-detail-info {
+    display: block !important;
+    padding: 0.55rem 0.2rem 0;
+    text-align: center;
+  }
+  .collection-page .products-grid.grid-3 .product-detail-info > *,
+  .collection-page .products-grid.grid-4 .product-detail-info > * {
+    display: none !important;
+  }
+  .collection-page .products-grid.grid-3 .product-detail-info h3,
+  .collection-page .products-grid.grid-4 .product-detail-info h3 {
+    display: block !important;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: 0.03em;
+    color: #f6eab0;
+  }
+}
