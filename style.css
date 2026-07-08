@@ -883,21 +883,13 @@ section {
   font-size: 0.8rem;
 }
 
-/* Sade koleksiyon kartı (tüm ekranlar): görsel + ad + tek fiyat.
-   Tür satırı, detaylı fiyat kutusu ve aksiyon butonları gizli;
-   tüm kart tıklanınca ürün sayfası açılır. */
-.products-grid.grid-3 .product-detail-info .product-type,
-.products-grid.grid-4 .product-detail-info .product-type,
-.products-grid.grid-3 .product-pricing,
-.products-grid.grid-4 .product-pricing,
-.products-grid.grid-3 .product-actions,
-.products-grid.grid-4 .product-actions {
+/* Sade koleksiyon kartı (Cocorrina tarzı): grid'de yalnızca görsel görünür.
+   Ad ve fiyat görselin altında DEĞİL, görselin üzerinde; fareyle üzerine
+   gelince görsel hafifçe kararır ve ad + fiyat belirir. Tüm kart tıklanınca
+   ürün sayfası açılır. */
+.products-grid.grid-3 .product-detail-info,
+.products-grid.grid-4 .product-detail-info {
   display: none !important;
-}
-
-.products-grid.grid-3 .card-price,
-.products-grid.grid-4 .card-price {
-  display: block;
 }
 
 .products-grid.grid-3 .product-detail,
@@ -905,18 +897,63 @@ section {
   cursor: pointer;
 }
 
-/* Masaüstünde (fare olan cihazlarda) fiyat yalnızca kartın üstüne gelince
-   görünür; dokunmatik ekranlarda hover olmadığından fiyat hep görünür kalır */
-@media (min-width: 991px) and (hover: hover) {
-  .products-grid.grid-3 .card-price,
-  .products-grid.grid-4 .card-price {
-    opacity: 0;
-    transition: opacity 0.3s ease;
+/* Görselin üzerine binen bilgi katmanı (ad + fiyat) — JS üretir */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+  background: rgba(45, 42, 38, 0);
+  opacity: 0;
+  transition: opacity 0.4s ease, background 0.4s ease;
+  pointer-events: none;
+}
+
+.card-overlay-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+
+.card-overlay-price {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+/* Fareli cihazlarda: yalnızca üzerine gelince görün, görsel kararır */
+@media (hover: hover) {
+  .product-detail:hover .card-overlay {
+    opacity: 1;
+    background: rgba(45, 42, 38, 0.42);
+  }
+}
+
+/* Dokunmatik cihazlarda (hover yok): ad + fiyat altta, görselin üstünde
+   hafif karartılı bir şerit olarak her zaman görünür */
+@media (hover: none) {
+  .card-overlay {
+    opacity: 1;
+    justify-content: flex-end;
+    background: linear-gradient(to top, rgba(35, 32, 28, 0.55) 0%, rgba(35, 32, 28, 0.15) 45%, rgba(35, 32, 28, 0) 75%);
   }
 
-  .products-grid.grid-3 .product-detail:hover .card-price,
-  .products-grid.grid-4 .product-detail:hover .card-price {
-    opacity: 1;
+  .card-overlay-name {
+    font-size: 0.95rem;
+  }
+
+  .card-overlay-price {
+    font-size: 0.82rem;
   }
 }
 

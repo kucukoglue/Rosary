@@ -1515,28 +1515,31 @@
         return prices;
       }
       function formatTL(n) { return n.toLocaleString('tr-TR') + ' ₺'; }
+      function priceLabel(card, lang) {
+        var prices = cardPrices(card);
+        if (!prices.length) return '';
+        var min = Math.min.apply(null, prices);
+        var multiple = prices.length > 1 && Math.max.apply(null, prices) !== min;
+        if (multiple) return (lang === 'en') ? ('From ' + formatTL(min)) : (formatTL(min) + ' +');
+        return formatTL(min);
+      }
       function renderCardPrices() {
         var lang = (document.documentElement.lang === 'en') ? 'en' : 'tr';
-        document.querySelectorAll('.product-detail').forEach(function (card) {
-          var info = card.querySelector('.product-detail-info');
-          if (!info) return;
-          var prices = cardPrices(card);
-          var el = info.querySelector('.card-price');
-          if (!prices.length) { if (el) el.textContent = ''; return; }
-          if (!el) {
-            el = document.createElement('div');
-            el.className = 'card-price';
-            var pricing = info.querySelector('.product-pricing');
-            if (pricing) pricing.insertAdjacentElement('afterend', el);
-            else info.appendChild(el);
+        document.querySelectorAll('.products-grid .product-detail').forEach(function (card) {
+          var gallery = card.querySelector('.product-gallery');
+          if (!gallery) return;
+          var nameEl = card.querySelector('.product-detail-info h3');
+          var name = nameEl ? nameEl.textContent.trim() : '';
+          var priceText = priceLabel(card, lang);
+          var overlay = gallery.querySelector('.card-overlay');
+          if (!overlay) {
+            overlay = document.createElement('div');
+            overlay.className = 'card-overlay';
+            overlay.innerHTML = '<div class="card-overlay-name"></div><div class="card-overlay-price"></div>';
+            gallery.appendChild(overlay);
           }
-          var min = Math.min.apply(null, prices);
-          var multiple = prices.length > 1 && Math.max.apply(null, prices) !== min;
-          if (multiple) {
-            el.textContent = (lang === 'en') ? ('From ' + formatTL(min)) : (formatTL(min) + ' +');
-          } else {
-            el.textContent = formatTL(min);
-          }
+          overlay.querySelector('.card-overlay-name').textContent = name;
+          overlay.querySelector('.card-overlay-price').textContent = priceText;
         });
       }
       // Tüm kart tıklanınca ürün sayfası açılsın (gizli "View Details" linkinden)
