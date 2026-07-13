@@ -1382,6 +1382,7 @@ section {
   padding: 2rem;
 }
 
+.product-detail-info h1,
 .product-detail-info h3 {
   color: var(--color-sage-dark);
   font-size: 1.4rem;
